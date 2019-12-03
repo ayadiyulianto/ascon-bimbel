@@ -1,7 +1,7 @@
 (function ($) {
  "use strict";
 	$('#summernote1').summernote({
-		height: 200,
+		height: 500,
 	});
 	$('#summernote2').summernote({
 		height: 200,
