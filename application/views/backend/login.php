@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Daftar | OASSE - Bimbel Online</title>
+    <title>Login | OASSE - Bimbel Online</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -67,39 +67,26 @@
 	<![endif]-->
 	<div class="error-pagewrap">
 		<div class="error-page-int">
-			<div class="text-center custom-login">
-				<h3>DAFTAR</h3>
-				<p>This is the best app ever!</p>
+			<div class="text-center m-b-md custom-login">
+				<h3>LOGIN</h3>
+				<p>OASSE - BIMBEL ONLINE!</p>
 			</div>
 			<div class="content-error">
 				<div class="hpanel">
                     <div class="panel-body">
                         <form action="#" id="loginForm">
-                            <div class="row">
-                                <div class="form-group col-lg-12">
-                                    <label>Username</label>
-                                    <input class="form-control">
-                                </div>
-                                <div class="form-group col-lg-12">
-                                    <label>Email</label>
-                                    <input class="form-control">
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <label>Password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <label>Repeat Password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="checkbox col-lg-12">
-                                    <input type="checkbox" class="i-checks" checked> Sign up for our newsletter
-                                </div>
+                            <div class="form-group">
+                                <label class="control-label" for="username">Username</label>
+                                <input type="text" placeholder="Username" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
+                                <span class="help-block small">Your unique username to app</span>
                             </div>
-                            <div class="text-center">
-                                <button class="btn btn-success loginbtn">Daftar</button>
-                                <button class="btn btn-default">Kembali</button>
+                            <div class="form-group">
+                                <label class="control-label" for="password">Password</label>
+                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
+                                <span class="help-block small">Yur strong password</span>
                             </div>
+                            <button class="btn btn-success btn-block loginbtn">Login</button>
+                            <a class="btn btn-default btn-block" href="#">Daftar</a>
                         </form>
                     </div>
                 </div>

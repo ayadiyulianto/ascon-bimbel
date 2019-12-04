@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>OASSE - Bimbel Online</title>
+    <title>Forum | OASSE - Bimbel Online</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -53,9 +53,6 @@
 		============================================ -->
     <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
     <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
-    <!-- accordions CSS
-         ============================================ -->
-    <link rel="stylesheet" href="css/accordions.css">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
@@ -64,15 +61,13 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- modernizr JS
 		============================================ -->
-    <link rel="stylesheet" href="css/modals.css">
-    <link rel="stylesheet" href="css/form/all-type-forms.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
     <!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
     <!-- Start Left menu area -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
@@ -122,8 +117,8 @@
                                     <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
                                         <div class="menu-switcher-pro">
                                             <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
-													<i class="educate-icon educate-nav"></i>
-												</button>
+                                                    <i class="educate-icon educate-nav"></i>
+                                                </button>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
@@ -301,250 +296,5 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
-
-        <div id="PrimaryModalhdbgcl" class="modal modal-edu-general default-popup-PrimaryModal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header header-color-modal bg-color-1">
-                                        <h4 class="modal-title">Tambah Kelas</h4>
-                                        <div class="modal-close-area modal-close-df">
-                                            <a class="close" data-dismiss="modal" href="#"><i class="fa fa-close"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="modal-login-form-inner">
-                                            <div class="row">
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <div class="basic-login-inner modal-basic-inner">
-                                                        <form action="#">
-                                                            <div class="form-group-inner">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                        <label class="login2">Kode Kelas</label>
-                                                                    </div>
-                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                                        <input type="email" class="form-control" placeholder="Masukkan kode modul" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group-inner">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                        <label class="login2">Nama Kelas</label>
-                                                                    </div>
-                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                                        <input type="password" class="form-control" placeholder="Masukkan kode kelas" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group-inner">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                <label class="login2">Foto</label>
-                                                            </div>
-                                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                                <div class="file-upload-inner file-upload-inner-right ts-forms">
-                                                                    <div class="input append-small-btn">
-                                                                        <div class="file-button">
-                                                                            Browse
-                                                                            <input type="file" onchange="document.getElementById('append-small-btn').value = this.value;">
-                                                                        </div>
-                                                                        <input type="text" id="append-small-btn" placeholder="no file selected">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group-inner">
-                                                                <div class="row">
-                                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                                        <label class="login2">Deskripsi</label>
-                                                                    </div>
-                                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                                        <textarea type="email" class="form-control" placeholder="Tuliskan deskripsi singkat"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a data-dismiss="modal" href="#">Batal</a>
-                                        <a href="#">Tambah</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-        <!-- accordion start-->
-        <div class="courses-area mg-t-15 mg-b-15">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="tab-content-details mg-b-30">
-                            <h2>Kelas Saya</h2>
-                             <a class="Primary mg-b-10" href="#" data-toggle="modal" data-target="#PrimaryModalhdbgcl">Tambah</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="courses-inner res-mg-b-30">
-                            <div class="courses-title">
-                                <a href="#"><img src="img/courses/1.jpg" alt=""></a>
-                                <h2>Apps Development</h2>
-                            </div>
-                            <div class="course-des">
-                                <p><span><i class="fa fa-clock"></i></span><b>Status:</b> Belum Selesai</p>
-                            </div>
-                            <div class="product-buttons">
-                                <a href="123-tentangkelas.html"><button type="button" class="button-default cart-btn">Tentang Kelas</button></a>
-                                <button type="button" class="button-default cart-btn">Lanjutkan Belajar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="courses-inner">
-                            <div class="courses-title">
-                                <a href="#"><img src="img/courses/2.jpg" alt=""></a>
-                                <h2>Illustrator CC 2018</h2>
-                            </div>
-                            <div class="course-des">
-                                <p><span><i class="fa fa-clock"></i></span><b>Status:</b> Belum Selesai</p>
-                            </div>
-                            <div class="product-buttons">
-                                <a href="123-tentangkelas.html"><button type="button" class="button-default cart-btn">Tentang Kelas</button></a>
-                                <button type="button" class="button-default cart-btn">Lanjutkan Belajar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="courses-inner res-mg-t-30 dk-res-t-pro-30">
-                            <div class="courses-title">
-                                <a href="#"><img src="img/courses/3.jpg" alt=""></a>
-                                <h2>Indesign cs6 2018</h2>
-                            </div>
-                            <div class="course-des">
-                                <p><span><i class="fa fa-clock"></i></span><b>Status:</b> Belum Selesai</p>
-                            </div>
-                            <div class="product-buttons">
-                                <a href="123-tentangkelas.html"><button type="button" class="button-default cart-btn">Tentang Kelas</button></a>
-                                <button type="button" class="button-default cart-btn">Lanjutkan Belajar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="courses-inner mg-t-30">
-                            <div class="courses-title">
-                                <a href="#"><img src="img/courses/1.jpg" alt=""></a>
-                                <h2>Android Development</h2>
-                            </div>
-                            <div class="course-des">
-                                <p><span><i class="fa fa-clock"></i></span><b>Status:</b> Belum Selesai</p>
-                            </div>
-                            <div class="product-buttons">
-                                <a href="123-tentangkelas.html"><button type="button" class="button-default cart-btn">Tentang Kelas</button></a>
-                                <button type="button" class="button-default cart-btn">Lanjutkan Belajar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="courses-inner mg-t-30">
-                            <div class="courses-title">
-                                <a href="#"><img src="img/courses/2.jpg" alt=""></a>
-                                <h2>Web Development</h2>
-                            </div>
-                           <div class="course-des">
-                                <p><span><i class="fa fa-clock"></i></span><b>Status:</b> Belum Selesai</p>
-                            </div>
-                            <div class="product-buttons">
-                                <a href="123-tentangkelas.html"><button type="button" class="button-default cart-btn">Tentang Kelas</button></a>
-                                <button type="button" class="button-default cart-btn">Lanjutkan Belajar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                        <div class="courses-inner mg-t-30">
-                            <div class="courses-title">
-                                <a href="#"><img src="img/courses/3.jpg" alt=""></a>
-                                <h2>Photoshop</h2>
-                            </div>
-                            <div class="course-des">
-                                <p><span><i class="fa fa-clock"></i></span><b>Status:</b> Belum Selesai</p>
-                            </div>
-                            <div class="product-buttons">
-                                <a href="123-tentangkelas.html"><button type="button" class="button-default cart-btn">Tentang Kelas</button></a>
-                                <button type="button" class="button-default cart-btn">Lanjutkan Belajar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- accordion End-->
-        <div class="footer-copyright-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="footer-copy-right">
-                            <p>Copyright © 2019. ASCON - Bimbel Online</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- jquery
-		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="js/metisMenu/metisMenu.min.js"></script>
-    <script src="js/metisMenu/metisMenu-active.js"></script>
-    <!-- tab JS
-		============================================ -->
-    <script src="js/tab.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="js/main.js"></script>
-	<!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
-</body>
-
-</html>
