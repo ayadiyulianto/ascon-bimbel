@@ -97,7 +97,7 @@
                                 <h2>Reviews</h2>
                             </div>
                             <div class="single-review-st-text">
-                                <img src="img/notification/1.jpg" alt="">
+                                <img src="<?php echo base_url('kiaalap/img/notification/1.jpg') ?>" alt="">
                                 <div class="review-ctn-hf">
                                     <h3>Sarah Graves</h3>
                                     <p>Highly recommend</p>
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="single-review-st-text">
-                                <img src="img/notification/2.jpg" alt="">
+                                <img src="<?php echo base_url('kiaalap/img/notification/2.jpg') ?>" alt="">
                                 <div class="review-ctn-hf">
                                     <h3>Garbease sha</h3>
                                     <p>Awesome Pro</p>
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
                             <div class="single-review-st-text">
-                                <img src="img/notification/3.jpg" alt="">
+                                <img src="<?php echo base_url('kiaalap/img/notification/3.jpg') ?>" alt="">
                                 <div class="review-ctn-hf">
                                     <h3>Gobetro pro</h3>
                                     <p>Great Website</p>
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="single-review-st-text">
-                                <img src="img/notification/4.jpg" alt="">
+                                <img src="<?php echo base_url('kiaalap/img/notification/4.jpg') ?>" alt="">
                                 <div class="review-ctn-hf">
                                     <h3>Siam Graves</h3>
                                     <p>That's Good</p>
@@ -153,7 +153,7 @@
                                 </div>
                             </div>
                             <div class="single-review-st-text">
-                                <img src="img/notification/5.jpg" alt="">
+                                <img src="<?php echo base_url('kiaalap/img/notification/5.jpg') ?>" alt="">
                                 <div class="review-ctn-hf">
                                     <h3>Sarah Graves</h3>
                                     <p>Highly recommend</p>
@@ -167,7 +167,7 @@
                                 </div>
                             </div>
                             <div class="single-review-st-text">
-                                <img src="img/notification/6.jpg" alt="">
+                                <img src="<?php echo base_url('kiaalap/img/notification/6.jpg') ?>" alt="">
                                 <div class="review-ctn-hf">
                                     <h3>Julsha Grav</h3>
                                     <p>Sei Hoise bro</p>

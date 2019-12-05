@@ -4,7 +4,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner res-mg-b-30">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/1.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/1.jpg') ?>" alt=""></a>
                                 <h2>Apps Development</h2>
                             </div>
                             <div class="courses-alaltic">
@@ -25,7 +25,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/2.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/2.jpg') ?>" alt=""></a>
                                 <h2>Illustrator CC 2018</h2>
                             </div>
                             <div class="courses-alaltic">
@@ -46,7 +46,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner res-mg-t-30 dk-res-t-pro-30">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/3.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/3.jpg') ?>" alt=""></a>
                                 <h2>Indesign cs6 2018</h2>
                             </div>
                             <div class="courses-alaltic">
@@ -67,7 +67,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner res-mg-t-30 dk-res-t-pro-30">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/1.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/1.jpg') ?>" alt=""></a>
                                 <h2>Web Development</h2>
                             </div>
                             <div class="courses-alaltic">
@@ -90,7 +90,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner mg-t-30">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/1.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/1.jpg') ?>" alt=""></a>
                                 <h2>Apps Development</h2>
                             </div>
                             <div class="courses-alaltic">
@@ -111,7 +111,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner mg-t-30">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/2.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/2.jpg') ?>" alt=""></a>
                                 <h2>Illustrator CC 2018</h2>
                             </div>
                             <div class="courses-alaltic">
@@ -132,7 +132,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner mg-t-30">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/3.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/3.jpg') ?>" alt=""></a>
                                 <h2>Indesign cs6 2018</h2>
                             </div>
                             <div class="courses-alaltic">
@@ -153,7 +153,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner mg-t-30">
                             <div class="courses-title">
-                                <a href="#"><img src="img/courses/1.jpg" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('kiaalap/img/courses/1.jpg') ?>" alt=""></a>
                                 <h2>Web Development</h2>
                             </div>
                             <div class="courses-alaltic">

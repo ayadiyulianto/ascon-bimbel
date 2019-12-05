@@ -18,18 +18,18 @@
     <title>Semua Kelas | OASSE - Bimbel Online</title>
 
     <!--====== FAVICON ICON =======-->
-    <link rel="shortcut icon" type="image/ico" href="assest/img/favicon.png" />
+    <link rel="shortcut icon" type="image/ico" href="<?php echo base_url('educrown/assest/img/favicon.png') ?>" />
 
     <!--====== STYLESHEETS ======-->
-    <link href="assest/css/plugins.css" rel="stylesheet">
-    <link href="assest/css/theme.css" rel="stylesheet">
-    <link href="assest/css/icons.css" rel="stylesheet">
+    <link href="<?php echo base_url('educrown/assest/css/plugins.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('educrown/assest/css/theme.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('educrown/assest/css/icons.css') ?>" rel="stylesheet">
 
     <!--====== MAIN STYLESHEETS ======-->
-    <link href="style.css" rel="stylesheet">
-    <link href="assest/css/responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url('educrown/style.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('educrown/assest/css/responsive.css') ?>" rel="stylesheet">
 
-    <script src="assest/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="<?php echo base_url('educrown/assest/js/vendor/modernizr-2.8.3.min.js') ?>"></script>
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -59,7 +59,7 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="#home" class="navbar-brand"><img src="assest/img/logo.png" alt="logo"></a>
+                            <a href="#home" class="navbar-brand"><img src="<?php echo base_url('educrown/assest/img/logo.png') ?>" alt="logo"></a>
                         </div>
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav pull-right">
@@ -150,14 +150,14 @@
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2 class="xs-font26">Kelas Favorit</h2>
+                        <h2 class="xs-font26">Daftar Kelas</h2>
                     </div>
                 </div>
             </div>
             <div class="row course-list">
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-1.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-1.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Php Sederhana</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-2.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-2.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Android Studio</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -177,7 +177,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-3.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-3.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Cara Lulus Tes Wawancara</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-4.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-4.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -206,14 +206,14 @@
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2 class="xs-font26">Kelas Gratis</h2>
+                        <h2 class="xs-font26">Daftar Kelas</h2>
                     </div>
                 </div>
             </div>
             <div class="row course-list">
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-1.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-1.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Php Sederhana</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -223,7 +223,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-2.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-2.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Android Studio</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -233,7 +233,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-3.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-3.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Cara Lulus Tes Wawancara</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -243,7 +243,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-4.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-4.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -262,14 +262,14 @@
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2 class="xs-font26">Semua Kelas</h2>
+                        <h2 class="xs-font26">Daftar Kelas</h2>
                     </div>
                 </div>
             </div>
             <div class="row course-list">
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-1.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-1.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Php Sederhana</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -279,7 +279,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-2.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-2.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Android Studio</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -289,7 +289,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-3.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-3.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Cara Lulus Tes Wawancara</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -299,7 +299,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="assest/img/course/blog-4.jpg" alt="">
+                        <img src="<?php echo base_url('educrown/assest/img/course/blog-4.jpg') ?>" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -331,7 +331,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
+                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
                                 </div>
                                 <h4>Adi Yulianto</h4>
                                 <a href="#">Google Manager</a>
@@ -343,7 +343,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
+                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
                                 </div>
                                 <h4>Robbie Sugara</h4>
                                 <a href="#">Graduate 2016</a>
@@ -355,7 +355,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
+                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
                                 </div>
                                 <h4>Edo Afriando</h4>
                                 <a href="#">Graduate 2016</a>
@@ -367,7 +367,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
+                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
                                 </div>
                                 <h4>Ricky Sadewa</h4>
                                 <a href="#">Graduate 2019</a>
@@ -387,34 +387,34 @@
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <div class="client-slider">
                         <div class="single-client">
-                            <img src="assest/img/client/client-6.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-6.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-7.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-7.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-8.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-8.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-9.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-9.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-10.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-10.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-6.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-6.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-7.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-7.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-8.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-8.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-9.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-9.png') ?>" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="assest/img/client/client-10.png" alt="">
+                            <img src="<?php echo base_url('educrown/assest/img/client/client-10.png') ?>" alt="">
                         </div>
                     </div>
                 </div>
@@ -451,7 +451,7 @@
                     <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
                         <div class="single-footer footer-about sm-mb50 xs-mb50 sm-center xs-center">
                             <div class="footer-logo mb30">
-                                <a href="#"><img src="assest/img/logo.png" alt=""></a>
+                                <a href="#"><img src="<?php echo base_url('educrown/assest/img/logo.png') ?>" alt=""></a>
                             </div>
                             <p>OASSE - Bimbel Online telah hadir untuk membantu Anda dalam menangani kecemasan Anda dalam menghadapi tes</p>
                         </div>
@@ -506,31 +506,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <!--====== SCRIPTS JS ======-->
-    <script src="assest/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assest/js/vendor/bootstrap.min.js"></script>
+    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery-1.12.4.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/vendor/bootstrap.min.js') ?>"></script>
 
     <!--====== PLUGINS JS ======-->
-    <script src="assest/js/vendor/jquery.easing.1.3.js"></script>
-    <script src="assest/js/vendor/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assest/js/vendor/jquery.appear.js"></script>
-    <script src="assest/js/owl.carousel.min.js"></script>
-    <script src="assest/js/stellar.js"></script>
-    <script src="assest/js/waypoints.min.js"></script>
-    <script src="assest/js/jquery.counterup.min.js"></script>
-    <script src="assest/js/wow.min.js"></script>
-    <script src="assest/js/jquery-modal-video.min.js"></script>
-    <script src="assest/js/stellarnav.min.js"></script>
-    <script src="assest/js/placeholdem.min.js"></script>
-    <script src="assest/js/contact-form.js"></script>
-    <script src="assest/js/jquery.ajaxchimp.js"></script>
-    <script src="assest/js/jquery.sticky.js"></script>
+    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery.easing.1.3.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery-migrate-1.2.1.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery.appear.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/owl.carousel.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/stellar.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/waypoints.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/jquery.counterup.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/wow.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/jquery-modal-video.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/stellarnav.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/placeholdem.min.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/contact-form.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/jquery.ajaxchimp.js') ?>"></script>
+    <script src="<?php echo base_url('educrown/assest/js/jquery.sticky.js') ?>"></script>
 
     <!--===== ACTIVE JS=====-->
-    <script src="assest/js/main.js"></script>
+    <script src="<?php echo base_url('educrown/assest/js/main.js') ?>"></script>
 
     <!--===== MAPS JS=====-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTS_KEDfHXYBslFTI_qPJIybDP3eceE-A&sensor=false"></script>
-    <script src="assest/js/maps.active.js"></script>
+    <script src="<?php echo base_url('educrown/assest/js/maps.active.js') ?>"></script>
 </body>
 
 </html>
