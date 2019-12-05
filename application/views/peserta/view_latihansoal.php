@@ -25,7 +25,7 @@
                                         <td>11 Nov 19</td>
                                         <td>80</td>
                                         <td>
-                                            <button class="pd-setting">Bahas</button>
+                                            <a href="<?php echo base_url('peserta/latihansoal/bahas')?>" class="pd-setting">Bahas</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -35,9 +35,10 @@
                                         <td>12 Nov 19</td>
                                         <td>50</td>
                                         <td>
-                                            <button class="ds-setting">Ulangi</button>
+                                            <a href="<?php echo base_url('peserta/latihansoal/latihan')?>" class="ds-setting">Ulangi</a>
                                         </td>
                                     </tr>
+                                    <?php for($i=0; $i<=5; $i++){ ?>
                                     <tr>
                                         <td>3</td>
                                         <td>Latihan 3</td>
@@ -46,33 +47,10 @@
                                         <td>-</td>
                                         <td>-</td>
                                     </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Latihan 4</td>
-                                        <td>Belum Dikerjakan</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Latihan 5</td>
-                                        <td>Belum Dikerjakan</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Latihan 6</td>
-                                        <td>Belum Dikerjakan</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                    </tr>
+                                    <?php } ?>
                                 </table>
                             </div>
-                            <div class="custom-pagination">
+                            <!-- <div class="custom-pagination">
                                 <nav aria-label="Page navigation example">
                                     <ul class="pagination">
                                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -82,7 +60,7 @@
                                         <li class="page-item"><a class="page-link" href="#">Next</a></li>
                                     </ul>
                                 </nav>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

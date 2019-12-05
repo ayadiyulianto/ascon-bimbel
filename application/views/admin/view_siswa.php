@@ -32,6 +32,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php for($i=0; $i<=5; $i++){ ?>
                                             <tr>
                                                 <td>1</td>
                                                 <td>MHS123</td>
@@ -45,59 +46,7 @@
                                                     <button data-toggle="tooltip" title="Hapus" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>MHS123</td>
-                                                <td>Ricky Sadewa</td>
-                                                <td>RickySadewa007@gmail.com</td>
-                                                <td>081271113744</td>
-                                                <td>25 Februari 1997</td>
-                                                <td>Laki-laki</td>
-                                                <td>
-                                                    <button data-toggle="tooltip" title="isi materi" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                                    <button data-toggle="tooltip" title="Hapus" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>MHS123</td>
-                                                <td>Ricky Sadewa</td>
-                                                <td>RickySadewa007@gmail.com</td>
-                                                <td>081271113744</td>
-                                                <td>25 Februari 1997</td>
-                                                <td>Laki-laki</td>
-                                                <td>
-                                                    <button data-toggle="tooltip" title="isi materi" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                                    <button data-toggle="tooltip" title="Hapus" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>MHS123</td>
-                                                <td>Ricky Sadewa</td>
-                                                <td>RickySadewa007@gmail.com</td>
-                                                <td>081271113744</td>
-                                                <td>25 Februari 1997</td>
-                                                <td>Laki-laki</td>
-                                                <td>
-                                                    <button data-toggle="tooltip" title="isi materi" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                                    <button data-toggle="tooltip" title="Hapus" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>MHS123</td>
-                                                <td>Ricky Sadewa</td>
-                                                <td>RickySadewa007@gmail.com</td>
-                                                <td>081271113744</td>
-                                                <td>25 Februari 1997</td>
-                                                <td>Laki-laki</td>
-                                                <td>
-                                                    <button data-toggle="tooltip" title="isi materi" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                                    <button data-toggle="tooltip" title="Hapus" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                                </td>
-                                            </tr>
-                                            
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>

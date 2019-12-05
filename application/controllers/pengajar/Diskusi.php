@@ -21,7 +21,7 @@ class Diskusi extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('pengajar/header');
-		$this->load->view('pengajar/');
+		$this->load->view('pengajar/diskusi');
 		$this->load->view('pengajar/footer');
 	}
 }

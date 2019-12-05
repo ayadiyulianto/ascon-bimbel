@@ -18,7 +18,7 @@ class Forum extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function forum()
+	public function index()
 	{
 		$this->load->view('peserta/header');
 		$this->load->view('peserta/view_forum');

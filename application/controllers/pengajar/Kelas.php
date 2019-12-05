@@ -21,7 +21,7 @@ class Kelas extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('pengajar/header');
-		$this->load->view('pengajar/semuakelas');
+		$this->load->view('pengajar/semua_kelas');
 		$this->load->view('pengajar/footer');
 	}
 }

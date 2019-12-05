@@ -1,7 +1,14 @@
 
         <!-- Static Table Start -->
-        <div class="data-table-area mg-b-15">
+        <div class="data-table-area mg-t-15 mg-b-15">
             <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="tab-content-details mg-b-30">
+                            <h2>Forum</h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="sparkline13-list">

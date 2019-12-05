@@ -28,7 +28,7 @@ class Peserta extends CI_Controller {
 	public function nilai()
 	{
 		$this->load->view('pengajar/header');
-		$this->load->view('pengajar/');
+		$this->load->view('pengajar/siswa');
 		$this->load->view('pengajar/footer');
 	}
 }

@@ -18,11 +18,11 @@ class KelasSaya extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function kelassaya()
+	public function index()
 	{
 		$this->load->view('peserta/header');
 		$this->load->view('peserta/view_kelassaya');
-		$this->load->view('peseta/footer');
+		$this->load->view('peserta/footer');
 	}
 
 	

@@ -1,5 +1,12 @@
 <div class="button-edu-area mg-b-15">
             <div class="container-fluid">
+                <div class="row mg-t-15">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="tab-content-details mg-b-30">
+                            <h2>02:50:00 <i class="fa fa-clock-o"></i></h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                         <div class="button-ad-wrap">

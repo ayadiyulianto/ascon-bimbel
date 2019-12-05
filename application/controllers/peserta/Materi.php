@@ -18,7 +18,7 @@ class Materi extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function materi()
+	public function index()
 	{
 		$this->load->view('peserta/header');
 		$this->load->view('peserta/view_materi');

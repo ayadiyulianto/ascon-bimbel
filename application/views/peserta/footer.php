@@ -1,4 +1,4 @@
-<div class="footer-copyright-area">
+        <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -52,6 +52,13 @@
     <script src="<?php echo base_url('kiaalap/js/calendar/moment.min.js') ?>"></script>
     <script src="<?php echo base_url('kiaalap/js/calendar/fullcalendar.min.js') ?>"></script>
     <script src="<?php echo base_url('kiaalap/js/calendar/fullcalendar-active.js') ?>"></script>
+    <!-- tab JS
+        ============================================ -->
+    <script src="<?php echo base_url('kiaalap/js/tab.js') ?>"></script>
+    <!-- icheck JS
+        ============================================ -->
+    <script src="<?php echo base_url('kiaalap/js/icheck/icheck.min.js') ?>"></script>
+    <script src="<?php echo base_url('kiaalap/js/icheck/icheck-active.js') ?>"></script>
     <!-- plugins JS
 		============================================ -->
     <script src="<?php echo base_url('kiaalap/js/plugins.js') ?>"></script>

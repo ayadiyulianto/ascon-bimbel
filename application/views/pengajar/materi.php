@@ -4,10 +4,17 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="tab-content-details mg-b-30">
+                            <h2>Materi</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
                             <h4>Materi</h4>
                             <div class="add-product">
-                                <a href="#">Tambah Materi</a>
+                                <a href="<?php echo base_url('pengajar/modul/isimateri') ?>">Tambah Materi</a>
                             </div>
                             <div class="asset-inner">
                                 <table>

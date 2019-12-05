@@ -1,4 +1,4 @@
-// Dashboard 1 Morris-chart
+Dashboard 1 Morris-chart
 
 Morris.Area({
         element: 'morris-area-chart',

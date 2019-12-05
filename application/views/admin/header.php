@@ -57,6 +57,15 @@
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-table.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-editable.css') ?>">
+    <!-- buttons CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/buttons.css') ?>">
+    <!-- forms CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/form/all-type-forms.css') ?>">
+    <!-- modals CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/modals.css') ?>">
     <!-- style CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/style.css') ?>">
@@ -65,7 +74,7 @@
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/responsive.css') ?>">
     <!-- modernizr JS
         ============================================ -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="<?php echo base_url('kiaalap/js/vendor/modernizr-2.8.3.min.js') ?>"></script>
 </head>
 
 <body>
@@ -76,14 +85,14 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header" style="background-color: #006DF0; padding: 5px">
-                <a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px;" class="main-logo" src="img/logo/logo-oasse-putih.png" alt="" /></a>
-                <strong><a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px;" src="img/logo/logo-image.png" alt="" /></a></strong>
+                <a href="<?php echo base_url('admin/dashboard') ?>"><img style="height: 50px;" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-oasse-putih.png') ?>" alt="" /></a>
+                <strong><a href="<?php echo base_url('admin/dashboard') ?>"><img style="height: 50px;" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a title="Landing Page" href="<?php echo base_url('admin/Dashboard') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
+                            <a title="Landing Page" href="<?php echo base_url('admin/dashboard') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
                         </li>
                         <li>
                             <a class="has-arrow" href="#">
@@ -101,9 +110,9 @@
                         <li>
                             <a class="has-arrow" href="<?php echo base_url('admin/DataMaster') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Data Master</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Semua Kelas" href="<?php echo base_url('admin/DataMaster/kelas') ?>"><span class="mini-sub-pro">Semua Kelas</span></a></li>
-                                <li><a title="Semua Pengajar" href="<?php echo base_url('admin/DataMaster/pengajar') ?>"><span class="mini-sub-pro">Semua Pengajar</span></a></li>
-                                <li><a title="Semua Siswa" href="<?php echo base_url('admin/DataMaster/siswa') ?>"><span class="mini-sub-pro">Semua Siswa</span></a></li>
+                                <li><a title="Semua Kelas" href="<?php echo base_url('admin/datamaster/kelas') ?>"><span class="mini-sub-pro">Semua Kelas</span></a></li>
+                                <li><a title="Semua Pengajar" href="<?php echo base_url('admin/datamaster/pengajar') ?>"><span class="mini-sub-pro">Semua Pengajar</span></a></li>
+                                <li><a title="Semua Siswa" href="<?php echo base_url('admin/datamaster/siswa') ?>"><span class="mini-sub-pro">Semua Siswa</span></a></li>
                                 <!-- <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Semua Pengguna</span></a></li> -->
                             </ul>
                         </li>
@@ -119,7 +128,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro" style="padding: 5px">
-                        <a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px" class="main-logo" src="img/logo/logo-image.png" alt="" /></a>
+                        <a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -141,7 +150,9 @@
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
-                                                <li class="nav-item"><a href="<?php echo base_url('Frontend/index') ?>" class="nav-link">Home</a>
+                                                <li class="nav-item"><a href="<?php echo base_url() ?>" class="nav-link">Home</a>
+                                                </li>
+                                                <li class="nav-item"><a href="<?php echo base_url('frontend/kelas') ?>" class="nav-link">Semua Kelas</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -159,7 +170,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/1.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/1.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -171,7 +182,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/4.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/4.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -183,7 +194,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/3.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/3.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -195,7 +206,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/2.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/2.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -272,7 +283,7 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                                                            <img src="img/product/pro4.jpg" alt="" />
+                                                            <img src="<?php echo base_url('kiaalap/img/product/pro4.jpg') ?>" alt="" />
                                                             <span class="admin-name">Prof.Anderson</span>
                                                             <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                         </a>
@@ -310,7 +321,7 @@
                                                 <li><a href="widgets.html">Widgets</a></li>
                                             </ul>
                                         </li>
-                                        <li><a data-toggle="collapse" data-target="#Charts" href="<?php echo base_url('admin/DataMaster') ?>">Data Master<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Data Master<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul class="collapse dropdown-header-top">
                                                 <li><a href="<?php echo base_url('admin/DataMaster/kelas') ?>">Semua Kelas</a></li>
                                                 <li><a href="<?php echo base_url('admin/DataMaster/pengajar') ?>">Semua Pengajar</a></li>
@@ -319,34 +330,6 @@
                                         </li>
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile Menu end -->
-            <div class="breadcome-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="breadcome-heading">
-                                            <form role="search" class="sr-input-func">
-                                                <input type="text" placeholder="Search..." class="search-int form-control">
-                                                <a href="#"><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <ul class="breadcome-menu">
-                                            <li><span class="bread-blod">Dashboard</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

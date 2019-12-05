@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('kiaalap/img/favicon.ico') ?>">
     <!-- Google Fonts
         ============================================ -->
-    <link href="<?php echo base_url('kiaalap/https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900') ?>" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <!-- Bootstrap CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/bootstrap.min.css') ?>">
@@ -57,6 +57,21 @@
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-table.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-editable.css') ?>">
+    <!-- buttons CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/buttons.css') ?>">
+    <!-- accordions CSS
+         ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/accordions.css') ?>">
+    <!-- forms CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/form/all-type-forms.css') ?>">
+    <!-- modals CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/modals.css') ?>">
+    <!-- tabs CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/tabs.css') ?>">
     <!-- style CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/style.css') ?>">
@@ -65,7 +80,7 @@
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/responsive.css') ?>">
     <!-- modernizr JS
         ============================================ -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="<?php echo base_url('kiaalap/js/vendor/modernizr-2.8.3.min.js') ?>"></script>
 </head>
 
 <body>
@@ -76,23 +91,23 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header" style="background-color: #006DF0; padding: 5px">
-                <a href="<?php echo base_url('peserta/KelasSaya') ?>"><img style="height: 50px;" class="main-logo" src="img/logo/logo-oasse-putih.png" alt="" /></a>
-                <strong><a href="index.html"><img style="height: 50px;" src="img/logo/logo-image.png" alt="" /></a></strong>
+                <a href="<?php echo base_url('peserta/kelassaya') ?>"><img style="height: 50px;" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-oasse-putih.png') ?>" alt="" /></a>
+                <strong><a href="<?php echo base_url('peserta/kelassaya') ?>"><img style="height: 50px;" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li>
-                            <a href="<?php echo base_url('peserta/KelasSaya') ?>" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
+                            <a href="<?php echo base_url('peserta/kelassaya') ?>" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('peserta/Materi') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Materi</span></a>
+                            <a href="<?php echo base_url('peserta/materi') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Materi</span></a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('peserta/LatihanSoal') ?>" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Latihan Soal</span></a>
+                            <a href="<?php echo base_url('peserta/latihansoal') ?>" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Latihan Soal</span></a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('peserta/Forum') ?>" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
+                            <a href="<?php echo base_url('peserta/forum') ?>" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -106,7 +121,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro" style="padding: 5px">
-                        <a href="<?php echo base_url('peserta/KelasSaya') ?>"><img style="height: 50px" class="main-logo" src="img/logo/logo-image.png" alt="" /></a>
+                        <a href="<?php echo base_url('peserta/kelassaya') ?>"><img style="height: 50px" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -128,9 +143,9 @@
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
-                                                <li class="nav-item"><a href="<?php echo base_url('Frontend/index') ?>" class="nav-link">Beranda</a>
+                                                <li class="nav-item"><a href="<?php echo base_url() ?>" class="nav-link">Beranda</a>
                                                 </li>
-                                                <li class="nav-item"><a href="<?php echo base_url('peserta/KelasSaya') ?>" class="nav-link">Kelas</a>
+                                                <li class="nav-item"><a href="<?php echo base_url('frontend/kelas') ?>" class="nav-link">Semua Kelas</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -148,7 +163,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/1.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/1.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -160,7 +175,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/4.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/4.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -172,7 +187,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/3.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/3.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -184,7 +199,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="img/contact/2.jpg" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/2.jpg') ?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -261,7 +276,7 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                                                            <img src="img/product/pro4.jpg" alt="" />
+                                                            <img src="<?php echo base_url('kiaalap/img/product/pro4.jpg') ?>" alt="" />
                                                             <span class="admin-name">Prof.Anderson</span>
                                                             <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                         </a>
@@ -290,10 +305,10 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
-                                        <li><a href="<?php echo base_url('peserta/KelasSaya') ?>">Kelas Saya</a></li>
-                                        <li><a href="<?php echo base_url('peserta/Materi') ?>">Materi</a></li>
-                                        <li><a href="<?php echo base_url('peserta/LatihanSoal') ?>">Latihan Soal</a></li>
-                                        <li><a href="<?php echo base_url('peserta/Forum') ?>">Forum</a></li>
+                                        <li><a href="<?php echo base_url('peserta/kelassaya') ?>">Kelas Saya</a></li>
+                                        <li><a href="<?php echo base_url('peserta/materi') ?>">Materi</a></li>
+                                        <li><a href="<?php echo base_url('peserta/latihansoal') ?>">Latihan Soal</a></li>
+                                        <li><a href="<?php echo base_url('peserta/forum') ?>">Forum</a></li>
                                     </ul>
                                 </nav>
                             </div>

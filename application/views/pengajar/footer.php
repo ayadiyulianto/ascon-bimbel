@@ -73,6 +73,9 @@
     <script src="<?php echo base_url('kiaalap/js/calendar/moment.min.js') ?>"></script>
     <script src="<?php echo base_url('kiaalap/js/calendar/fullcalendar.min.js') ?>"></script>
     <script src="<?php echo base_url('kiaalap/js/calendar/fullcalendar-active.js') ?>"></script>
+    <!-- tab JS
+        ============================================ -->
+    <script src="<?php echo base_url('kiaalap/js/tab.js') ?>"></script>
     <!-- plugins JS
         ============================================ -->
     <script src="<?php echo base_url('kiaalap/js/plugins.js') ?>"></script>
@@ -84,7 +87,12 @@
     <script src="<?php echo base_url('kiaalap/js/tawk-chat.js') ?>"></script>
 
     <script src="<?php echo base_url('kiaalap/js/summernote/summernote.min.js') ?>"></script>
-    <script src="<?php echo base_url('kiaalap/js/summernote/summernote-active.js') ?>"></script>
+
+    <script type="text/javascript">
+        $('#summernote').summernote({
+            height: "400px"
+        })
+    </script>
 
 </body>
 

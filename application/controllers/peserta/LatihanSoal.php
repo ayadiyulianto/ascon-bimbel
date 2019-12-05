@@ -18,10 +18,24 @@ class LatihanSoal extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function latihansoal()
+	public function index()
 	{
 		$this->load->view('peserta/header');
 		$this->load->view('peserta/view_latihansoal');
+		$this->load->view('peserta/footer');
+	}
+	
+	public function latihan()
+	{
+		$this->load->view('peserta/header');
+		$this->load->view('peserta/view_soal');
+		$this->load->view('peserta/footer');
+	}
+
+	public function bahas()
+	{
+		$this->load->view('peserta/header');
+		$this->load->view('peserta/view_pembahasan');
 		$this->load->view('peserta/footer');
 	}
 }

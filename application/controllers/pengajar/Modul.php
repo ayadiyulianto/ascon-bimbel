@@ -25,17 +25,24 @@ class Modul extends CI_Controller {
 		$this->load->view('pengajar/footer');
 	}
 
-	public function latihansoal()
+	public function latihanSoal()
 	{
 		$this->load->view('pengajar/header');
-		$this->load->view('pengajar/latihansoal');
+		$this->load->view('pengajar/latihan_soal');
 		$this->load->view('pengajar/footer');
 	}
 
-	public function isimodul()
+	public function materi()
 	{
 		$this->load->view('pengajar/header');
-		$this->load->view('pengajar/isimodul');
+		$this->load->view('pengajar/materi');
+		$this->load->view('pengajar/footer');
+	}
+
+	public function isiMateri()
+	{
+		$this->load->view('pengajar/header');
+		$this->load->view('pengajar/isi_materi');
 		$this->load->view('pengajar/footer');
 	}
 }
