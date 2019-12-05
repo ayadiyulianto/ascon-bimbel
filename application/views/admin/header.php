@@ -9,60 +9,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
         ============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('kiaalap/img/favicon.ico') ?>">
     <!-- Google Fonts
         ============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <!-- Bootstrap CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/bootstrap.min.css') ?>">
     <!-- Bootstrap CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/font-awesome.min.css') ?>">
     <!-- owl.carousel CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/owl.carousel.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/owl.theme.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/owl.transitions.css') ?>">
     <!-- animate CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/animate.css') ?>">
     <!-- normalize CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/normalize.css') ?>">
     <!-- meanmenu icon CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/meanmenu.min.css') ?>">
     <!-- main CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/main.css') ?>">
     <!-- educate icon CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/educate-custon-icon.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/educate-custon-icon.css') ?>">
     <!-- morrisjs CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/morrisjs/morris.css') ?>">
     <!-- mCustomScrollbar CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/scrollbar/jquery.mCustomScrollbar.min.css') ?>">
     <!-- metisMenu CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/metisMenu/metisMenu.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/metisMenu/metisMenu-vertical.css') ?>">
     <!-- calendar CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/calendar/fullcalendar.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/calendar/fullcalendar.print.min.css') ?>">
     <!-- normalize CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/data-table/bootstrap-table.css">
-    <link rel="stylesheet" href="css/data-table/bootstrap-editable.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-table.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-editable.css') ?>">
     <!-- style CSS
         ============================================ -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/style.css') ?>">
     <!-- responsive CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/responsive.css') ?>">
     <!-- modernizr JS
         ============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -76,14 +76,14 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header" style="background-color: #006DF0; padding: 5px">
-                <a href="#"><img style="height: 50px;" class="main-logo" src="img/logo/logo-oasse-putih.png" alt="" /></a>
-                <strong><a href="#"><img style="height: 50px;" src="img/logo/logo-image.png" alt="" /></a></strong>
+                <a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px;" class="main-logo" src="img/logo/logo-oasse-putih.png" alt="" /></a>
+                <strong><a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px;" src="img/logo/logo-image.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a title="Landing Page" href="#" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
+                            <a title="Landing Page" href="<?php echo base_url('admin/Dashboard') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
                         </li>
                         <li>
                             <a class="has-arrow" href="#">
@@ -99,11 +99,11 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow" href="234-semuakelas.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Data Master</span></a>
+                            <a class="has-arrow" href="<?php echo base_url('admin/DataMaster') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Data Master</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Semua Kelas" href="234-semuakelas.html"><span class="mini-sub-pro">Semua Kelas</span></a></li>
-                                <li><a title="Semua Pengajar" href="234-pengajar.html"><span class="mini-sub-pro">Semua Pengajar</span></a></li>
-                                <li><a title="Semua Siswa" href="234-siswa.html"><span class="mini-sub-pro">Semua Siswa</span></a></li>
+                                <li><a title="Semua Kelas" href="<?php echo base_url('admin/DataMaster/kelas') ?>"><span class="mini-sub-pro">Semua Kelas</span></a></li>
+                                <li><a title="Semua Pengajar" href="<?php echo base_url('admin/DataMaster/pengajar') ?>"><span class="mini-sub-pro">Semua Pengajar</span></a></li>
+                                <li><a title="Semua Siswa" href="<?php echo base_url('admin/DataMaster/siswa') ?>"><span class="mini-sub-pro">Semua Siswa</span></a></li>
                                 <!-- <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Semua Pengguna</span></a></li> -->
                             </ul>
                         </li>
@@ -119,7 +119,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro" style="padding: 5px">
-                        <a href="#"><img style="height: 50px" class="main-logo" src="img/logo/logo-image.png" alt="" /></a>
+                        <a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px" class="main-logo" src="img/logo/logo-image.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
-                                                <li class="nav-item"><a href="#" class="nav-link">Home</a>
+                                                <li class="nav-item"><a href="<?php echo base_url('Frontend/index') ?>" class="nav-link">Home</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -300,7 +300,7 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
-                                        <li><a href="#">Dashboard</a></li>
+                                        <li><a href="<?php echo base_url('admin/Dashboard') ?>">Dashboard</a></li>
                                         <li><a data-toggle="collapse" data-target="#Charts" href="#">Profile<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul class="collapse dropdown-header-top">
                                                 <li><a href="index.html">Dashboard v.1</a></li>
@@ -310,12 +310,11 @@
                                                 <li><a href="widgets.html">Widgets</a></li>
                                             </ul>
                                         </li>
-                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Data Master<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                        <li><a data-toggle="collapse" data-target="#Charts" href="<?php echo base_url('admin/DataMaster') ?>">Data Master<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul class="collapse dropdown-header-top">
-                                                <li><a href="index.html">Semua Kelas</a></li>
-                                                <li><a href="index-3.html">Semua Pengajar</a></li>
-                                                <li><a href="index-1.html">Semua Siswa</a></li>
-                                                <li><a href="analytics.html">Semua Pengguna</a></li>\
+                                                <li><a href="<?php echo base_url('admin/DataMaster/kelas') ?>">Semua Kelas</a></li>
+                                                <li><a href="<?php echo base_url('admin/DataMaster/pengajar') ?>">Semua Pengajar</a></li>
+                                                <li><a href="<?php echo base_url('admin/DataMaster/siswa') ?>">Semua Siswa</a></li>
                                             </ul>
                                         </li>
                                     </ul>

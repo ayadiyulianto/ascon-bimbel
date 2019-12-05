@@ -12,7 +12,7 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="latest-blog-single blog-single-full-view">
                                         <div class="blog-image">
-                                            <a href="#"><img src="img/blog-details/1.jpg" alt="" />
+                                            <a href="#"><img src="<?php echo base_url('kiaalap/img/blog-details/1.jpg') ?>" alt="" />
 												</a>
                                             <div class="blog-date">
                                                 <p><span class="blog-day">28</span> Nov</p>

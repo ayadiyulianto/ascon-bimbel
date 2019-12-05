@@ -4,63 +4,67 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Forum | OASSE - Bimbel Online</title>
+    <title>Dashboard | OASSE - Bimbel Online</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
-		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('kiaalap/img/favicon.ico') ?>">
     <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+        ============================================ -->
+    <link href="<?php echo base_url('kiaalap/https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900') ?>" rel="stylesheet">
     <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/bootstrap.min.css') ?>">
     <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/font-awesome.min.css') ?>">
     <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/owl.carousel.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/owl.theme.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/owl.transitions.css') ?>">
     <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/animate.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/animate.css') ?>">
     <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/normalize.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/normalize.css') ?>">
     <!-- meanmenu icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/meanmenu.min.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/meanmenu.min.css') ?>">
     <!-- main CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/main.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/main.css') ?>">
     <!-- educate icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/educate-custon-icon.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/educate-custon-icon.css') ?>">
     <!-- morrisjs CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/morrisjs/morris.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/morrisjs/morris.css') ?>">
     <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/scrollbar/jquery.mCustomScrollbar.min.css') ?>">
     <!-- metisMenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/metisMenu/metisMenu.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/metisMenu/metisMenu-vertical.css') ?>">
     <!-- calendar CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/calendar/fullcalendar.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/calendar/fullcalendar.print.min.css') ?>">
+    <!-- normalize CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-table.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-editable.css') ?>">
     <!-- style CSS
-		============================================ -->
-    <link rel="stylesheet" href="style.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/style.css') ?>">
     <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/responsive.css">
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/responsive.css') ?>">
     <!-- modernizr JS
-		============================================ -->
+        ============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
@@ -72,23 +76,23 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header" style="background-color: #006DF0; padding: 5px">
-                <a href="index.html"><img style="height: 50px;" class="main-logo" src="img/logo/logo-oasse-putih.png" alt="" /></a>
+                <a href="<?php echo base_url('peserta/KelasSaya') ?>"><img style="height: 50px;" class="main-logo" src="img/logo/logo-oasse-putih.png" alt="" /></a>
                 <strong><a href="index.html"><img style="height: 50px;" src="img/logo/logo-image.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li>
-                            <a href="123-kelassaya.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
+                            <a href="<?php echo base_url('peserta/KelasSaya') ?>" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
                         </li>
                         <li>
-                            <a href="123-materi.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Materi</span></a>
+                            <a href="<?php echo base_url('peserta/Materi') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Materi</span></a>
                         </li>
                         <li>
-                            <a href="123-latihansoal.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Latihan Soal</span></a>
+                            <a href="<?php echo base_url('peserta/LatihanSoal') ?>" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Latihan Soal</span></a>
                         </li>
                         <li>
-                            <a href="123-forum.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
+                            <a href="<?php echo base_url('peserta/Forum') ?>" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -102,7 +106,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro" style="padding: 5px">
-                        <a href="index.html"><img style="height: 50px" class="main-logo" src="img/logo/logo-image.png" alt="" /></a>
+                        <a href="<?php echo base_url('peserta/KelasSaya') ?>"><img style="height: 50px" class="main-logo" src="img/logo/logo-image.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -124,9 +128,9 @@
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
-                                                <li class="nav-item"><a href="123-beranda.html" class="nav-link">Beranda</a>
+                                                <li class="nav-item"><a href="<?php echo base_url('Frontend/index') ?>" class="nav-link">Beranda</a>
                                                 </li>
-                                                <li class="nav-item"><a href="123-tentangkelas.html" class="nav-link">Kelas</a>
+                                                <li class="nav-item"><a href="<?php echo base_url('peserta/KelasSaya') ?>" class="nav-link">Kelas</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -286,10 +290,10 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
-                                        <li><a href="events.html">Kelas Saya</a></li>
-                                        <li><a href="events.html">Materi</a></li>
-                                        <li><a href="events.html">Latihan Soal</a></li>
-                                        <li><a href="events.html">Forum</a></li>
+                                        <li><a href="<?php echo base_url('peserta/KelasSaya') ?>">Kelas Saya</a></li>
+                                        <li><a href="<?php echo base_url('peserta/Materi') ?>">Materi</a></li>
+                                        <li><a href="<?php echo base_url('peserta/LatihanSoal') ?>">Latihan Soal</a></li>
+                                        <li><a href="<?php echo base_url('peserta/Forum') ?>">Forum</a></li>
                                     </ul>
                                 </nav>
                             </div>
