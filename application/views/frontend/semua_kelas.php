@@ -15,18 +15,18 @@
     <meta name="keywords" content="App, Landing, Business, Onepage, Html, Business" />
 
     <!--====== TITLE TAG ======-->
-    <title>Beranda | OASSE - Bimbel Online</title>
+    <title>Semua Kelas | OASSE - Bimbel Online</title>
 
     <!--====== FAVICON ICON =======-->
-    <link rel="shortcut icon" type="image/ico" href="<?php echo base_url('educrown/assest/img/favicon.png') ?>" />
+    <link rel="shortcut icon" type="image/ico" href="assest/img/favicon.png" />
 
     <!--====== STYLESHEETS ======-->
-    <link href="<?php echo base_url('educrown/assest/css/plugins.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('educrown/assest/css/theme.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('educrown/assest/css/icons.css') ?>" rel="stylesheet">
+    <link href="assest/css/plugins.css" rel="stylesheet">
+    <link href="assest/css/theme.css" rel="stylesheet">
+    <link href="assest/css/icons.css" rel="stylesheet">
 
     <!--====== MAIN STYLESHEETS ======-->
-    <link href="<?php echo base_url('educrown/style.css') ?>" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link href="assest/css/responsive.css" rel="stylesheet">
 
     <script src="assest/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -59,13 +59,13 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="<?php echo base_url() ?>" class="navbar-brand"><img src="<?php echo base_url('educrown/assest/img/logo.png') ?>" alt="logo"></a>
+                            <a href="#home" class="navbar-brand"><img src="assest/img/logo.png" alt="logo"></a>
                         </div>
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav pull-right">
-                                <li class="active"><a href="<?php echo base_url() ?>">Beranda</a></li>
-                                <li><a href="<?php echo base_url('frontend/kelas') ?>">Kelas</a></li>
-                                <li><a href="<?php echo base_url('auth') ?>">Login</a></li>
+                                <li class="active"><a href="#home">Beranda</a></li>
+                                <li><a href="#courses">Kelas</a></li>
+                                <li><a href="#testmonial">Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -144,105 +144,20 @@
     </header>
     <!--END TOP AREA-->
 
-    <!--FEATURES TOP AREA-->
-    <section class="features-top-area" id="features">
-        <div class="container">
-            <div class="row promo-content">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s">
-                        <div class="box-icon features-box-icon">
-                            <i class="fa fa-graduation-cap"></i>
-                        </div>
-                        <h3 class="box-title">Keunggulan 1</h3>
-                        <p>A Google Docs scam that appears to be widespread began landing in Wednesday in what seemed to be a phishing attack.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="text-icon-box relative mb20 xs-mb0  wow fadeInUp padding30" data-wow-delay="0.2s">
-                        <div class="box-icon features-box-icon">
-                            <i class="icofont icofont-business-man-alt-1"></i>
-                        </div>
-                        <h3 class="box-title">Keunggulan 2</h3>
-                        <p>A Google Docs scam that appears to be widespread began landing in Wednesday in what seemed to be a phishing attack.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="text-icon-box relative mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.3s">
-                        <div class="box-icon features-box-icon">
-                            <i class="fa fa-rocket"></i>
-                        </div>
-                        <h3 class="box-title">Keunggulan 3</h3>
-                        <p>A Google Docs scam that appears to be widespread began landing in Wednesday in what seemed to be a phishing attack.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FEATURES TOP AREA END-->
-
-    <!--ABOUT TOP CONTENT AREA-->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
-                    <div class="text-center wow fadeIn">
-                        <h2 class="xs-font20">OASSE - Bimbel Online dipercaya oleh 50.000 murid</h2>
-                        <p>Microsoft has spent a lot of time trying to make Windows self-repairing, partly because it generally gets the blame when other programs or users try to improve” it. Given that tens of thousands of expert programmers have worked on the code over the past 30 years.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--ABOUT TOP CONTENT AREA END-->
-
-    <!--FUN FACT AREA AREA-->
-    <section class="fun-fact-area center white relative padding-100-70" id="fact">
-        <div class="area-bg" data-stellar-background-ratio="0.6"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.1s">
-                        <h3 class="font60 xs-font26"><span class="counter">20</span>k</h3>
-                        <p class="font600">Graduated Students</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.2s">
-                        <h3 class="font60 xs-font26"><span class="counter">124</span></h3>
-                        <p class="font600">Expert Instructors</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.3s">
-                        <h3 class="font60 xs-font26"><span class="counter">600</span>k</h3>
-                        <p class="font600">Books in our library</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.4s">
-                        <h3 class="font60 xs-font26"><span class="counter">15</span>k</h3>
-                        <p class="font600">Students get employed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FUN FACT AREA AREA END-->
-
     <!--COURSE AREA-->
     <section class="course-area padding-top" id="courses">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2 class="xs-font26">Daftar Kelas</h2>
+                        <h2 class="xs-font26">Kelas Favorit</h2>
                     </div>
                 </div>
             </div>
             <div class="row course-list">
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-1.jpg') ?>" alt="">
+                        <img src="assest/img/course/blog-1.jpg" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Php Sederhana</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -252,7 +167,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-2.jpg') ?>" alt="">
+                        <img src="assest/img/course/blog-2.jpg" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Belajar Android Studio</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -262,7 +177,7 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-3.jpg') ?>" alt="">
+                        <img src="assest/img/course/blog-3.jpg" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Cara Lulus Tes Wawancara</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -272,7 +187,119 @@
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-4.jpg') ?>" alt="">
+                        <img src="assest/img/course/blog-4.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--COURSE AREA END-->
+
+    <!--COURSE AREA-->
+    <section class="course-area padding-top" id="courses">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2 class="xs-font26">Kelas Gratis</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row course-list">
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-1.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Belajar Php Sederhana</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-2.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Belajar Android Studio</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-3.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Cara Lulus Tes Wawancara</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-4.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--COURSE AREA END-->
+
+    <!--COURSE AREA-->
+    <section class="course-area padding-top" id="courses">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+                    <div class="area-title text-center wow fadeIn">
+                        <h2 class="xs-font26">Semua Kelas</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row course-list">
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-1.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Belajar Php Sederhana</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-2.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Belajar Android Studio</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-3.jpg" alt="">
+                        <div class="course-details padding30">
+                            <h3 class="font18">Cara Lulus Tes Wawancara</h3>
+                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                    <div class="single-course mb20">
+                        <img src="assest/img/course/blog-4.jpg" alt="">
                         <div class="course-details padding30">
                             <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
                             <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -304,7 +331,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
+                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
                                 </div>
                                 <h4>Adi Yulianto</h4>
                                 <a href="#">Google Manager</a>
@@ -316,7 +343,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
+                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
                                 </div>
                                 <h4>Robbie Sugara</h4>
                                 <a href="#">Graduate 2016</a>
@@ -328,7 +355,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
+                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
                                 </div>
                                 <h4>Edo Afriando</h4>
                                 <a href="#">Graduate 2016</a>
@@ -340,7 +367,7 @@
                             </div>
                             <div class="author-name-image relative">
                                 <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
+                                    <img src="assest/img/testmonial/testmonial.jpg" alt="">
                                 </div>
                                 <h4>Ricky Sadewa</h4>
                                 <a href="#">Graduate 2019</a>
@@ -353,66 +380,6 @@
     </section>
     <!--TESTMONIAL AREA AREA END-->
 
-    <!--BLOG AREA-->
-    <section class="blog-feed-area padding-top" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2>From Our Blog</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-1.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-2.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-3.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item wow fadeInUp visible-sm" data-wow-delay="0.4s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-1.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--BLOG AREA END-->
-
     <!--CLIENT AREA-->
     <div class="client-area  padding-bottom mt100 sm-mt10 xs-mt0">
         <div class="container">
@@ -420,34 +387,34 @@
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <div class="client-slider">
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-6.png') ?>" alt="">
+                            <img src="assest/img/client/client-6.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-7.png') ?>" alt="">
+                            <img src="assest/img/client/client-7.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-8.png') ?>" alt="">
+                            <img src="assest/img/client/client-8.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-9.png') ?>" alt="">
+                            <img src="assest/img/client/client-9.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-10.png') ?>" alt="">
+                            <img src="assest/img/client/client-10.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-6.png') ?>" alt="">
+                            <img src="assest/img/client/client-6.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-7.png') ?>" alt="">
+                            <img src="assest/img/client/client-7.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-8.png') ?>" alt="">
+                            <img src="assest/img/client/client-8.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-9.png') ?>" alt="">
+                            <img src="assest/img/client/client-9.png" alt="">
                         </div>
                         <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-10.png') ?>" alt="">
+                            <img src="assest/img/client/client-10.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -484,7 +451,7 @@
                     <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
                         <div class="single-footer footer-about sm-mb50 xs-mb50 sm-center xs-center">
                             <div class="footer-logo mb30">
-                                <a href="#"><img src="<?php echo base_url('educrown/assest/img/logo.png') ?>" alt=""></a>
+                                <a href="#"><img src="assest/img/logo.png" alt=""></a>
                             </div>
                             <p>OASSE - Bimbel Online telah hadir untuk membantu Anda dalam menangani kecemasan Anda dalam menghadapi tes</p>
                         </div>
@@ -539,31 +506,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <!--====== SCRIPTS JS ======-->
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery-1.12.4.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/vendor/bootstrap.min.js') ?>"></script>
+    <script src="assest/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assest/js/vendor/bootstrap.min.js"></script>
 
     <!--====== PLUGINS JS ======-->
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery.easing.1.3.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery-migrate-1.2.1.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery.appear.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/owl.carousel.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/stellar.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/waypoints.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery.counterup.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/wow.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery-modal-video.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/stellarnav.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/placeholdem.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/contact-form.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery.ajaxchimp.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery.sticky.js') ?>"></script>
+    <script src="assest/js/vendor/jquery.easing.1.3.js"></script>
+    <script src="assest/js/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assest/js/vendor/jquery.appear.js"></script>
+    <script src="assest/js/owl.carousel.min.js"></script>
+    <script src="assest/js/stellar.js"></script>
+    <script src="assest/js/waypoints.min.js"></script>
+    <script src="assest/js/jquery.counterup.min.js"></script>
+    <script src="assest/js/wow.min.js"></script>
+    <script src="assest/js/jquery-modal-video.min.js"></script>
+    <script src="assest/js/stellarnav.min.js"></script>
+    <script src="assest/js/placeholdem.min.js"></script>
+    <script src="assest/js/contact-form.js"></script>
+    <script src="assest/js/jquery.ajaxchimp.js"></script>
+    <script src="assest/js/jquery.sticky.js"></script>
 
     <!--===== ACTIVE JS=====-->
-    <script src="<?php echo base_url('educrown/assest/js/main.js') ?>"></script>
+    <script src="assest/js/main.js"></script>
 
     <!--===== MAPS JS=====-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTS_KEDfHXYBslFTI_qPJIybDP3eceE-A&sensor=false"></script>
-    <script src="<?php echo base_url('educrown/assest/js/maps.active.js') ?>"></script>
+    <script src="assest/js/maps.active.js"></script>
 </body>
 
 </html>
