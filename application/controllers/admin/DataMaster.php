@@ -26,11 +26,11 @@ class DataMaster extends CI_Controller {
 	}
 
 	public function kelas()
-		{
-			$this->load->view('admin/header');
-			$this->load->view('admin/view_semuakelas');
-			$this->load->view('admin/footer');
-		}
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/view_semuakelas');
+		$this->load->view('admin/footer');
+	}
 	
 
 	public function siswa()

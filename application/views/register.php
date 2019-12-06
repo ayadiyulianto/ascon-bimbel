@@ -1,4 +1,4 @@
-<<!doctype html>
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -47,6 +47,10 @@
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/calendar/fullcalendar.min.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/calendar/fullcalendar.print.min.css') ?>">
+    <!-- buttons CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/buttons.css') ?>">
+
     <!-- forms CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/form/all-type-forms.css') ?>">
@@ -74,31 +78,41 @@
 			<div class="content-error">
 				<div class="hpanel">
                     <div class="panel-body">
-                        <form action="#" id="loginForm">
+                        <label style="color: blue">
+                          <?php
+                            $info=$this->session->flashdata('info');
+                            if(!empty($info)) { echo $info;}
+                          ?>
+                        </label>
+                        <label style="color: red">
+                          <?php
+                            $error=$this->session->flashdata('error');
+                            if(!empty($error)) { echo $error;}
+                            echo validation_errors();
+                          ?>
+                        </label>
+                        <form id="loginForm" method="post">
                             <div class="row">
                                 <div class="form-group col-lg-12">
                                     <label>Username</label>
-                                    <input class="form-control">
+                                    <input type="text" required="required" name="username" class="form-control">
                                 </div>
                                 <div class="form-group col-lg-12">
                                     <label>Email</label>
-                                    <input class="form-control">
+                                    <input type="email" required="required" name="email" class="form-control">
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Password</label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" required="required" name="password" class="form-control">
                                 </div>
                                 <div class="form-group col-lg-6">
                                     <label>Repeat Password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="checkbox col-lg-12">
-                                    <input type="checkbox" class="i-checks" checked> Sign up for our newsletter
+                                    <input type="password" required="required" name="ulangipassword" class="form-control">
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-success loginbtn">Daftar</button>
-                                <button class="btn btn-default">Kembali</button>
+                                <button class="btn btn-success btn-block loginbtn">Daftar</button>
+                                <a class="btn btn-default btn-block" href="<?php echo base_url('auth/login') ?>">Kembali</a>
                             </div>
                         </form>
                     </div>

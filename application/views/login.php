@@ -74,7 +74,20 @@
 			<div class="content-error">
 				<div class="hpanel">
                     <div class="panel-body">
-                        <form action="#" id="loginForm">
+                        <label style="color: blue">
+                          <?php
+                            $info=$this->session->flashdata('info');
+                            if(!empty($info)) { echo $info;}
+                          ?>
+                        </label>
+                        <label style="color: red">
+                          <?php
+                            $error=$this->session->flashdata('error');
+                            if(!empty($error)) { echo $error;}
+                            echo validation_errors();
+                          ?>
+                        </label>
+                        <form id="loginForm" method="post">
                             <div class="form-group">
                                 <label class="control-label" for="username">Username</label>
                                 <input type="text" placeholder="Username" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
@@ -83,7 +96,12 @@
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
                                 <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
-                                <span class="help-block small">Yur strong password</span>
+                                <span class="help-block small">Your strong password</span>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" class="i-checks"> Tetap login pada perangkat ini
+                                </div>
                             </div>
                             <button class="btn btn-success btn-block loginbtn">Login</button>
                             <a class="btn btn-default btn-block" href="<?php echo base_url('auth/daftar') ?>">Daftar</a>
