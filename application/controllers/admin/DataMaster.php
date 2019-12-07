@@ -18,20 +18,25 @@ class DataMaster extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function kelas()
+	{
+		$this->load->view('admin/view_semuakelas');
+	}
+
+	public function tambahKelas()
+	{
+		
+		$this->load->view('admin/view_semuakelas');
+		$this->load->view('admin/footer');
+	}
+
 	public function pengajar()
 	{
 		$this->load->view('admin/header');
 		$this->load->view('admin/view_pengajar');
 		$this->load->view('admin/footer');
 	}
-
-	public function kelas()
-	{
-		$this->load->view('admin/header');
-		$this->load->view('admin/view_semuakelas');
-		$this->load->view('admin/footer');
-	}
-	
 
 	public function siswa()
 	{

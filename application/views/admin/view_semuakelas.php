@@ -1,3 +1,4 @@
+<?php $this->load->view('admin/header'); ?>
 
         <div class="courses-area">
             <div class="container-fluid">
@@ -53,7 +54,7 @@
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="basic-login-inner modal-basic-inner">
-                                        <form action="#">
+                                        <form action="<?= base_url('admin/datamaster/tambahKelas') ?>" id="formTambah">
                                             <div class="form-group-inner">
                                                 <div class="row">
                                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -111,8 +112,10 @@
                     </div>
                     <div class="modal-footer">
                         <a data-dismiss="modal" href="#">Batal</a>
-                        <a href="#">Tambah</a>
+                        <a onclick="document.getElementById('formTambah').submit();" href="#">Tambah</a>
                     </div>
                 </div>
             </div>
         </div>
+
+<?php $this->load->view('admin/footer'); ?>

@@ -5,18 +5,17 @@ class Auth extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('MyModel');
-		$this->load->library('password');
+		$this->load->model('AuthModel');
 	}
 	
 	public function index() {
 		if ($this->session->userdata('oasse-bimbel') == TRUE) {
 			if ($this->session->userdata('role')=='admin'){
-				redirect("admin/dashboard");
+				redirect(base_url("admin/dashboard"));
 			} elseif ($this->session->userdata('role')=='pengajar') {
-				redirect("pengajar/kelas");
+				redirect(base_url("pengajar/kelas"));
 			} elseif ($this->session->userdata('role')=='peserta') {
-				redirect("peserta/kelassaya");
+				redirect(base_url("peserta/kelassaya"));
 			} 
 		} else {
 			$this->login();
@@ -25,7 +24,7 @@ class Auth extends CI_Controller {
 
 	public function login() {
 		header("Access-Control-Allow-Origin: *");
-		if($this->session->userdata('printing') == TRUE){
+		if($this->session->userdata('oasse-bimbel') == TRUE){
 			$this->index();
 		}else{
 			$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
@@ -34,20 +33,25 @@ class Auth extends CI_Controller {
 			if ($this->form_validation->run() == FALSE) {
 				$this->load->view('login');
 			} else {
-				$where = array(
-					'username' => $this->input->post('username')
-				);
-				$result = $this->MyModel->get_where('tb_user',$where)->row();
-				if (password_verify($this->input->post('password'), $result->password)) {
-					$session_data['oasse-bimbel'] = TRUE;
-					$session_data['username'] = $result->row()->username;
-					$session_data['nama'] = $result->row()->nama;
-					$session_data['role'] = $result->row()->role;
-					// Add user data in session
-					$this->session->set_userdata($session_data);
-					$this->index();
-				} else {
-					$this->session->set_flashdata('error','Username atau Password Salah');
+				$username = $this->input->post('username');
+				$password = $this->input->post('password');
+				$checkUser = $this->AuthModel->checkUser($username);
+				if($checkUser->num_rows()==1){
+					$user =  $checkUser->row();
+					if (password_verify($password, $user->password)) {
+						$session_data['oasse-bimbel'] = TRUE;
+						$session_data['username'] = $user->username;
+						$session_data['nama'] = $user->nama;
+						$session_data['role'] = $user->role;
+						// Add user data in session
+						$this->session->set_userdata($session_data);
+						$this->index();
+					} else {
+						$this->session->set_flashdata('error','Password Salah');
+						$this->load->view('login');
+					}
+				}else {
+					$this->session->set_flashdata('error','Username Salah');
 					$this->load->view('login');
 				}
 			}
@@ -58,7 +62,7 @@ class Auth extends CI_Controller {
 	// Logout from admin page
 	public function logout() {
 		$this->session->sess_destroy();
-		redirect("printing/auth");
+		redirect(base_url("auth"));
 	}
 
 	public function daftar()
@@ -75,20 +79,20 @@ class Auth extends CI_Controller {
 			if ($this->form_validation->run() == FALSE) {
 				$this->load->view('register');
 			} else {
-				$cek = $this->MyModel->get_where('tb_user', array('username'=>$this->input->post('username')));
-				if($cek->num_rows()==1){
+				$cek = $this->AuthModel->checkUser($this->input->post('username'));
+				if($cek->num_rows()){
 					$this->session->set_flashdata('error','Username telah terdaftar.');
 				}else{
-					$akun['id_user'] = 'P00001';
+					$lastId = $this->AuthModel->getLastId();
+					$akun['id_user'] = ++$lastId;
 					$akun['email'] = $this->input->post('email');
 					$akun['username'] = $this->input->post('username');
 					$akun['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
 					$akun['role'] = "peserta";
-
-					$insert=$this->MyModel->insert('tb_user',$akun);
+					$insert=$this->AuthModel->createNewUser($akun);
 					if($insert){
 						$this->session->set_flashdata('info','Pendaftaran Berhasil. Silahkan Login!');
-						redirect('auth');
+						redirect(base_url('auth'));
 					}else{
 						$this->session->set_flashdata('error','Gagal Input Data');
 						$this->load->view('register');
@@ -96,16 +100,15 @@ class Auth extends CI_Controller {
 				}
 			}
 		}
-		
 	}
 
 	public function lupapassword() {
 		header("Access-Control-Allow-Origin: *");
-		if($this->session->userdata('logged_in') == TRUE){
+		if($this->session->userdata('oasse-bimbel') == TRUE){
 			$this->index();
 		}else{
 			$email=$this->input->post('email');
-			$result = $this->MyModel->get_where('printing_tb_biodata_penghuni',array('email'=>$email));
+			$result = $this->AuthModel->get_where('tb_user',array('email'=>$email));
 			if ($result->num_rows()==1) {
 				$this->session->set_flashdata('info','Perubahan password telah dikirim ke email anda. Silahkan periksa  kotak masuk email anda');
 			} else {
