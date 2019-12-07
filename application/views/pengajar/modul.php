@@ -1,4 +1,4 @@
-
+<?php $this->load->view('pengajar/header'); ?>
         <!-- Static Table Start -->
         <div class="data-table-area mg-t-15 mg-b-15">
             <div class="container-fluid">
@@ -55,14 +55,14 @@
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="basic-login-inner modal-basic-inner">
-                                        <form action="#">
+                                        <form action="<?= base_url('pengajar/modul/tambahModul') ?>" id="formTambah">
                                             <div class="form-group-inner">
                                                 <div class="row">
                                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                                         <label class="login2">Kode Modul</label>
                                                     </div>
                                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <input type="email" class="form-control" placeholder="Masukkan kode modul" />
+                                                        <input name="kode_modul" type="text" class="form-control" placeholder="Masukkan kode modul" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -72,7 +72,7 @@
                                                         <label class="login2">Kode Kelas</label>
                                                     </div>
                                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <input type="password" class="form-control" placeholder="Masukkan kode kelas" />
+                                                        <input name="kode_kelas" type="text" class="form-control" placeholder="Masukkan kode kelas" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,17 +82,7 @@
                                                         <label class="login2">Judul Modul</label>
                                                     </div>
                                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <input type="email" class="form-control" placeholder="Masukkan judul" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group-inner">
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                                        <label class="login2">Passing Grade</label>
-                                                    </div>
-                                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <input type="email" class="form-control" placeholder="Masukkan nilai" />
+                                                        <input name="nama_modul" type="text" class="form-control" placeholder="Masukkan judul" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,11 +92,10 @@
                                                         <label class="login2">Deskripsi</label>
                                                     </div>
                                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <textarea type="email" class="form-control" placeholder="Tuliskan deskripsi singkat"></textarea>
+                                                        <textarea name="deskripsi_singkat" type="text" class="form-control" placeholder="Tuliskan deskripsi singkat"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
                                         </form>
                                     </div>
                                 </div>
@@ -120,3 +109,4 @@
                 </div>
             </div>
         </div>
+<?php $this->load->view('pengajar/footer'); ?>

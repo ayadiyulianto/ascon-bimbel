@@ -1,4 +1,4 @@
-    
+<?php $this->load->view('pengajar/header'); ?>    
         <div class="courses-area">
             <div class="container-fluid">
                 <div class="row">
@@ -175,3 +175,4 @@
                 </div>
             </div>
         </div>
+<?php $this->load->view('pengajar/footer'); ?>
