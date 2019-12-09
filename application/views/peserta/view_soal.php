@@ -1,3 +1,4 @@
+<?php $this->load->view('peserta/header'); ?>
 <div class="button-edu-area mg-b-15">
             <div class="container-fluid">
                 <div class="row mg-t-15">
@@ -87,3 +88,4 @@
                 </div>
             </div>
         </div>
+<?php $this->load->view('peserta/footer'); ?>

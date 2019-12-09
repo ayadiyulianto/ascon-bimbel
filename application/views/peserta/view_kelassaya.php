@@ -1,3 +1,4 @@
+<?php $this->load->view('peserta/header'); ?>
         <!-- accordion start-->
         <div class="courses-area mg-t-15 mg-b-15">
             <div class="container-fluid">
@@ -29,3 +30,4 @@
                 </div>
             </div>
         </div>
+<?php $this->load->view('peserta/footer'); ?>

@@ -1,3 +1,4 @@
+<?php $this->load->view('peserta/header'); ?>
   <div class="product-status mg-t-15 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
@@ -66,3 +67,4 @@
                 </div>
             </div>
         </div>
+<?php $this->load->view('peserta/footer'); ?>
