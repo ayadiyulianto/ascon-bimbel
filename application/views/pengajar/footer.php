@@ -91,6 +91,10 @@
     <script type="text/javascript">
         $('#summernote').summernote({
             height: "400px"
+        });
+
+        $('#summernote1').summernote({
+            height: "200px"
         })
     </script>
 

@@ -27,9 +27,9 @@
 
     <!--====== MAIN STYLESHEETS ======-->
     <link href="<?php echo base_url('educrown/style.css') ?>" rel="stylesheet">
-    <link href="assest/css/responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url('educrown/assest/css/responsive.css') ?>" rel="stylesheet">
 
-    <script src="assest/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="<?php echo base_url('educrown/assest/js/vendor/modernizr-2.8.3.min.js') ?>"></script>
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
