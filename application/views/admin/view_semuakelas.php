@@ -5,7 +5,7 @@
                 <div class="row mg-t-15">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="tab-content-details mg-b-15">
-                            <h2>Kelas Saya <a class="pull-right btn btn-custon-four btn-primary" href="#" data-toggle="modal" data-target="#PrimaryModalhdbgcl">Tambah</a></h2>
+                            <h2>Kelas Saya <a class="pull-right btn btn-custon-four btn-primary" data-toggle="modal" data-target="#PrimaryModalhdbgcl">Tambah</a></h2>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,8 @@
                                 <p><span><i class="fa fa-clock"></i></span> <b>Students:</b> 100+</p>
                             </div>
                             <div class="product-buttons">
-                                <button type="button" class="button-default cart-btn">Read More</button>
+                                <button type="button" class="button-default cart-btn">Ubah</button>
+                                <button type="button" class="button-warning cart-btn">Hapus</button>
                             </div>
                         </div>
                     </div>
@@ -36,7 +37,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id="PrimaryModalhdbgcl" class="modal modal-edu-general default-popup-PrimaryModal fade" role="dialog">
             <div class="modal-dialog">
@@ -61,7 +61,7 @@
                                                         <label class="login2">Kode Kelas</label>
                                                     </div>
                                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <input type="email" class="form-control" placeholder="Masukkan kode modul" />
+                                                        <input name="kode_kelas" type="text" class="form-control" placeholder="Masukkan Kode Kelas" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,7 +71,7 @@
                                                         <label class="login2">Nama Kelas</label>
                                                     </div>
                                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <input type="password" class="form-control" placeholder="Masukkan kode kelas" />
+                                                        <input name="nama" type="text" class="form-control" placeholder="Masukkan kode kelas" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -85,7 +85,7 @@
                                                     <div class="input append-small-btn">
                                                         <div class="file-button">
                                                             Browse
-                                                            <input type="file" onchange="document.getElementById('append-small-btn').value = this.value;">
+                                                            <input name="foto" type="file" onchange="document.getElementById('append-small-btn').value = this.value;">
                                                         </div>
                                                         <input type="text" id="append-small-btn" placeholder="no file selected">
                                                     </div>
@@ -99,7 +99,7 @@
                                                         <label class="login2">Deskripsi</label>
                                                     </div>
                                                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                                                        <textarea type="email" class="form-control" placeholder="Tuliskan deskripsi singkat"></textarea>
+                                                        <textarea name="deskripsi" class="form-control" placeholder="Tuliskan deskripsi singkat"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

@@ -3,21 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DataMaster extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct() {
+		parent::__construct();
+		$this->load->model('AdminModel');
+	}
 
 	public function kelas()
 	{
@@ -26,22 +15,66 @@ class DataMaster extends CI_Controller {
 
 	public function tambahKelas()
 	{
-		
-		$this->load->view('admin/view_semuakelas');
-		$this->load->view('admin/footer');
+		$data['kode_kelas'] = $this->input->post('kode_kelas');
+		$data['nama'] = $this->input->post('nama');
+		$data['foto'] = $this->input->post('foto');
+		$data['deskripsi'] = $this->input->post('deskripsi');
+		$insert = $this->AdminModel->insert('tb_kelas', $data);
+		if($insert){
+			$this->session->set_flashdata('info','Berhasil menambah kelas');
+			redirect(base_url('admin/datamaster/kelas'));
+		}else{
+			$this->session->set_flashdata('info','Gagal menambah kelas');
+			redirect(base_url('admin/datamaster/kelas'));
+		}
+	}
+
+	public function ubahKelas($kode_kelas)
+	{
+		$data['kode_kelas'] = $this->input->post('kode_kelas');
+		$data['nama'] = $this->input->post('nama');
+		$data['foto'] = $this->input->post('foto');
+		$data['deskripsi'] = $this->input->post('deskripsi');
+		$where = array('kode_kelas'=>$kode_kelas);
+		$update = $this->AdminModel->update('tb_kelas', $data, $where);
+		if($update){
+			$this->session->set_flashdata('info','Berhasil mengubah kelas');
+			redirect(base_url('admin/datamaster/kelas'));
+		}else{
+			$this->session->set_flashdata('info','Gagal mengubah kelas');
+			redirect(base_url('admin/datamaster/kelas'));
+		}
+	}
+
+	public function hapusKelas($kode_kelas){
+		$where = array('kode_kelas'=>$kode_kelas);
+		$delete = $this->AdminModel->delete('tb_kelas', $where);
+		if($delete){
+			$this->session->set_flashdata('info','Berhasil menghapus kelas');
+			redirect(base_url('admin/datamaster/kelas'));
+		}else{
+			$this->session->set_flashdata('info','Gagal menghapus kelas');
+			redirect(base_url('admin/datamaster/kelas'));
+		}
 	}
 
 	public function pengajar()
 	{
-		$this->load->view('admin/header');
 		$this->load->view('admin/view_pengajar');
-		$this->load->view('admin/footer');
+	}
+
+	public function tambahPengajar()
+	{
+		$this->load->view('admin/vFormPengajar');
 	}
 
 	public function siswa()
 	{
-		$this->load->view('admin/header');
 		$this->load->view('admin/view_siswa');
-		$this->load->view('admin/footer');
+	}
+
+	public function tambahSiswa()
+	{
+		$this->load->view('admin/vFormPengajar');
 	}
 }

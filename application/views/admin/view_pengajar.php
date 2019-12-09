@@ -1,4 +1,6 @@
-<div class="data-table-area mg-b-15">
+<?php $this->load->view('admin/header'); ?>
+
+<div class="data-table-area mg-t-15 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -11,6 +13,7 @@
                             <div class="sparkline13-graph">
                                 <div class="datatable-dashv1-list custom-datatable-overright">
                                     <div id="toolbar">
+                                        <a class="pull-right btn btn-custon-four btn-primary" href="<?php echo base_url('admin/datamaster/tambahPengajar') ?>">Tambah</a>
                                         <select class="form-control dt-tb">
 											<option value="">Export Basic</option>
 											<option value="all">Export All</option>
@@ -56,3 +59,5 @@
                 </div>
             </div>
         </div>
+
+<?php $this->load->view('admin/footer'); ?>
