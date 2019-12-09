@@ -1,3 +1,4 @@
+<?php $this->load->view('peserta/header'); ?>
  <div class="contacts-area mg-t-15 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
@@ -6,7 +7,7 @@
                             <h2>Forum</h2>
                         </div>
                     </div>
-                    <?php for($i=0; $i<=5; $i++){ ?>
+                <?php for($i=0; $i<=5; $i++){ ?>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mg-t-15">
                         <div class="hpanel hblue contact-panel contact-panel-cs responsive-mg-b-30">
                             <div class="panel-body custom-panel-jw">
@@ -30,7 +31,8 @@
                             </div>
                         </div>
                     </div>
-                    <?php } ?>
-                </div>
+                <?php } ?>
             </div>
         </div>
+    </div>
+<?php $this->load->view('peserta/footer'); ?>
