@@ -6,6 +6,7 @@ class Auth extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('AuthModel');
+		$this->load->library('session');
 	}
 	
 	public function index() {
@@ -40,6 +41,7 @@ class Auth extends CI_Controller {
 					$user =  $checkUser->row();
 					if (password_verify($password, $user->password)) {
 						$session_data['oasse-bimbel'] = TRUE;
+						$session_data['id_user'] = $user->id_user;
 						$session_data['username'] = $user->username;
 						$session_data['nama'] = $user->nama;
 						$session_data['role'] = $user->role;
