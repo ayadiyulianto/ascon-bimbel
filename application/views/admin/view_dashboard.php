@@ -1,6 +1,8 @@
-<div class="traffice-source-area mg-b-30">
+<?php $this->load->view('admin/header'); ?>
+
+        <div class="traffice-source-area mg-b-30">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row mg-t-15">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                         <div class="white-box analytics-info-cs">
                             <h3 class="box-title">Total Visit</h3>
@@ -241,3 +243,5 @@
                 </div>
             </div>
         </div>
+        
+<?php $this->load->view('admin/footer'); ?>

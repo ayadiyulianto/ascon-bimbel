@@ -5,6 +5,11 @@ class LatihanSoal extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+
+		if ($this->session->userdata('role') != 'siswa' OR $this->session->userdata('oasse-bimbel') == FALSE) {
+			redirect("auth");
+		}
+
 		$this->load->model('PesertaModel');
 		$this->load->library('session');
 	}

@@ -57,24 +57,24 @@
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-table.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/data-table/bootstrap-editable.css') ?>">
-    <!-- buttons CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/buttons.css') ?>">
     <!-- accordions CSS
          ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/accordions.css') ?>">
+    <!-- buttons CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/buttons.css') ?>">
     <!-- forms CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/form/all-type-forms.css') ?>">
     <!-- modals CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/modals.css') ?>">
-    <!-- tabs CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/tabs.css') ?>">
     <!-- style CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/style.css') ?>">
+    <!-- summernote CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/summernote/summernote.css') ?>">
     <!-- responsive CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/responsive.css') ?>">
@@ -87,41 +87,32 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!-- Start Left menu area -->
+    <!-- Start Header menu area -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header" style="background-color: #006DF0; padding: 5px">
-                <a href="<?php echo base_url('peserta/kelassaya') ?>"><img style="height: 50px;" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-oasse-putih.png') ?>" alt="" /></a>
-                <strong><a href="<?php echo base_url('peserta/kelassaya') ?>"><img style="height: 50px;" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a></strong>
+                <a href="<?php echo base_url('pengajar/kelas') ?>"><img style="height: 50px;" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-oasse-putih.png') ?>" alt="" /></a>
+                <strong><a href="<?php echo base_url('pengajar/kelas') ?>"><img style="height: 50px;" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
-                        <li>
-                            <a href="<?php echo base_url('peserta/kelassaya') ?>" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url('peserta/materi') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Materi</span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url('peserta/latihansoal') ?>" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Latihan Soal</span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url('peserta/forum') ?>" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
+                        <li class="active">
+                            <a title="Landing Page" href="<?php echo base_url('pengajar/kelas') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Kelas</span></a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </nav>
     </div>
-    <!-- End Left menu area -->
+    <!-- End Header menu area -->
     <!-- Start Welcome area -->
     <div class="all-content-wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro" style="padding: 5px">
-                        <a href="<?php echo base_url('peserta/kelassaya') ?>"><img style="height: 50px" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a>
+                        <a href="<?php echo base_url('pengajar/Kelas') ?>"><img style="height: 50px" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -143,9 +134,7 @@
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
-                                                <li class="nav-item"><a href="<?php echo base_url() ?>" class="nav-link">Beranda</a>
-                                                </li>
-                                                <li class="nav-item"><a href="<?php echo base_url('frontend/kelas') ?>" class="nav-link">Semua Kelas</a>
+                                                <li class="nav-item"><a href="<?php echo base_url() ?>" class="nav-link">Home</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -187,7 +176,7 @@
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
-                                                                        <img src="<?php echo base_url('kiaalap/img/contact/3.jpg') ?>" alt="">
+                                                                        <img src="<?php echo base_url('kiaalap/img/contact/3.jpg')?>" alt="">
                                                                     </div>
                                                                     <div class="message-content">
                                                                         <span class="message-date">16 Sept</span>
@@ -283,7 +272,7 @@
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
                                                         </li>
-                                                        <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        <li><a href="<?= base_url('auth/logout') ?>"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -296,7 +285,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Mobile Menu start -->
             <div class="mobile-menu-area">
                 <div class="container">
@@ -305,15 +293,12 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
-                                        <li><a href="<?php echo base_url('peserta/kelassaya') ?>">Kelas Saya</a></li>
-                                        <li><a href="<?php echo base_url('peserta/materi') ?>">Materi</a></li>
-                                        <li><a href="<?php echo base_url('peserta/latihansoal') ?>">Latihan Soal</a></li>
-                                        <li><a href="<?php echo base_url('peserta/forum') ?>">Forum</a></li>
+                                        <li><a href="<?php echo base_url('pengajar/kelas') ?>">Kelas</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>

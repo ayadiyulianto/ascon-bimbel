@@ -1,7 +1,31 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PesertaModel extends CI_Model {
+class SiswaModel extends CI_Model {
+
+	// Basic CUD
+
+	public function insert($table, $data) {
+		return $this->db->insert($table, $data);
+	}
+
+	public function update($table, $data, $where) {
+		return $this->db->update($table, $data, $where);
+	}
+
+	public function delete($table, $where) {
+		return $this->db->delete($table, $where);
+	}
+
+	// KELAS SAYA
+
+	public function getKelasSaya($id_user){
+		$this->db->select('tb_kelas.id, nama, tb_kelas_user.tgl_dibuat, deskripsi_singkat, foto');
+		$this->db->from('tb_kelas_user');
+		$this->db->join('tb_kelas', 'tb_kelas.id=tb_kelas_user.id_kelas');
+		$this->db->where('tb_kelas_user.id_user', $id_user);
+		return $this->db->get();
+	}
 
 	public function getForum(){
 		$this->db->order_by('tgl_dibuat','DESC');
@@ -39,17 +63,6 @@ class PesertaModel extends CI_Model {
 		return $this->db->insert_batch('tb_sesi_soal',$soal);
 	}
 
-	public function getSoal()
+	public function getSoal(){}
 
-	public function insert($table, $data) {
-		return $this->db->insert($table, $data);
-	}
-
-	public function update($table, $data, $where) {
-		return $this->db->update($table, $data, $where);
-	}
-
-	public function delete($table, $where) {
-		return $this->db->delete($table, $where);
-	}
 }

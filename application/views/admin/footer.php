@@ -76,6 +76,18 @@
     <!-- tab JS
         ============================================ -->
     <script src="<?php echo base_url('kiaalap/js/tab.js') ?>"></script>
+    <!-- datapicker JS
+        ============================================ -->
+    <script src="<?php echo base_url('kiaalap/js/datapicker/bootstrap-datepicker.js') ?>"></script>
+    <script src="<?php echo base_url('kiaalap/js/datapicker/datepicker-active.js') ?>"></script>
+    <!-- chosen JS
+        ============================================ -->
+    <script src="<?php echo base_url('kiaalap/js/chosen/chosen.jquery.js') ?>"></script>
+    <script src="<?php echo base_url('kiaalap/js/chosen/chosen-active.js') ?>"></script>
+    <!-- select2 JS
+        ============================================ -->
+    <script src="<?php echo base_url('kiaalap/js/select2/select2.full.min.js') ?>"></script>
+    <script src="<?php echo base_url('kiaalap/js/select2/select2-active.js') ?>"></script>
     <!-- plugins JS
         ============================================ -->
     <script src="<?php echo base_url('kiaalap/js/plugins.js') ?>"></script>
@@ -85,6 +97,19 @@
     <!-- tawk chat JS
         ============================================ -->
     <script src="<?php echo base_url('kiaalap/js/tawk-chat.js') ?>"></script>
+    <!-- text editor summernote JS
+        ============================================ -->
+    <script src="<?php echo base_url('kiaalap/js/summernote/summernote.min.js') ?>"></script>
+
+    <script type="text/javascript">
+        $('#summernote').summernote({
+            height: "400px"
+        });
+
+        $('#summernote1').summernote({
+            height: "200px"
+        })
+    </script>
 
     <script type="text/javascript">
         Morris.Area({
@@ -141,6 +166,13 @@
             
         });
     </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
 </body>
 
 </html>

@@ -60,27 +60,18 @@
     <!-- buttons CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/buttons.css') ?>">
+    <!-- accordions CSS
+         ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/accordions.css') ?>">
     <!-- forms CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/form/all-type-forms.css') ?>">
     <!-- modals CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/modals.css') ?>">
-    <!-- datapicker CSS
+    <!-- tabs CSS
         ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/datapicker/datepicker3.css') ?>">
-    <!-- forms CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/form/themesaller-forms.css') ?>">
-    <!-- select2 CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/select2/select2.min.css') ?>">
-    <!-- chosen CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/chosen/bootstrap-chosen.css') ?>">
-    <!-- summernote CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/summernote/summernote.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/tabs.css') ?>">
     <!-- style CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/style.css') ?>">
@@ -96,54 +87,41 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!-- Start Header menu area -->
+    <!-- Start Left menu area -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header" style="background-color: #006DF0; padding: 5px">
-                <a href="<?php echo base_url('admin/dashboard') ?>"><img style="height: 50px;" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-oasse-putih.png') ?>" alt="" /></a>
-                <strong><a href="<?php echo base_url('admin/dashboard') ?>"><img style="height: 50px;" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a></strong>
+                <a href="<?php echo base_url('siswa/kelassaya') ?>"><img style="height: 50px;" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-oasse-putih.png') ?>" alt="" /></a>
+                <strong><a href="<?php echo base_url('siswa/kelassaya') ?>"><img style="height: 50px;" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
-                        <li class="active">
-                            <a title="Landing Page" href="<?php echo base_url('admin/dashboard') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
+                        <li>
+                            <a href="<?php echo base_url('siswa/kelassaya') ?>" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
                         </li>
                         <li>
-                            <a class="has-arrow" href="#">
-                                   <span class="educate-icon educate-apps icon-wrap"></span>
-                                   <span class="mini-click-non">Frontend</span>
-                                </a>
-                            <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard v.1</span></a></li>
-                                <li><a title="Dashboard v.2" href="index-1.html"><span class="mini-sub-pro">Dashboard v.2</span></a></li>
-                                <li><a title="Dashboard v.3" href="index-2.html"><span class="mini-sub-pro">Dashboard v.3</span></a></li>
-                                <li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>
-                                <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
-                            </ul>
+                            <a href="<?php echo base_url('siswa/materi') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Materi</span></a>
                         </li>
                         <li>
-                            <a class="has-arrow" href="<?php echo base_url('admin/DataMaster') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Data Master</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Semua Kelas" href="<?php echo base_url('admin/datamaster/kelas') ?>"><span class="mini-sub-pro">Semua Kelas</span></a></li>
-                                <li><a title="Semua Pengajar" href="<?php echo base_url('admin/datamaster/pengajar') ?>"><span class="mini-sub-pro">Semua Pengajar</span></a></li>
-                                <li><a title="Semua Siswa" href="<?php echo base_url('admin/datamaster/siswa') ?>"><span class="mini-sub-pro">Semua Siswa</span></a></li>
-                                <!-- <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Semua Pengguna</span></a></li> -->
-                            </ul>
+                            <a href="<?php echo base_url('siswa/latihansoal') ?>" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Latihan Soal</span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url('siswa/forum') ?>" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </nav>
     </div>
-    <!-- End Header menu area -->
+    <!-- End Left menu area -->
     <!-- Start Welcome area -->
     <div class="all-content-wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro" style="padding: 5px">
-                        <a href="<?php echo base_url('admin/Dashboard') ?>"><img style="height: 50px" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a>
+                        <a href="<?php echo base_url('siswa/kelassaya') ?>"><img style="height: 50px" class="main-logo" src="<?php echo base_url('kiaalap/img/logo/logo-image.png') ?>" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -165,7 +143,7 @@
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
-                                                <li class="nav-item"><a href="<?php echo base_url() ?>" class="nav-link">Home</a>
+                                                <li class="nav-item"><a href="<?php echo base_url() ?>" class="nav-link">Beranda</a>
                                                 </li>
                                                 <li class="nav-item"><a href="<?php echo base_url('frontend/kelas') ?>" class="nav-link">Semua Kelas</a>
                                                 </li>
@@ -305,7 +283,7 @@
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
                                                         </li>
-                                                        <li><a href="<?= base_url('auth/logout') ?>"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        <li><a href="<?= base_url('auth/logout') ?>">"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -318,6 +296,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Mobile Menu start -->
             <div class="mobile-menu-area">
                 <div class="container">
@@ -326,28 +305,15 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
-                                        <li><a href="<?php echo base_url('admin/Dashboard') ?>">Dashboard</a></li>
-                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Profile<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul class="collapse dropdown-header-top">
-                                                <li><a href="index.html">Dashboard v.1</a></li>
-                                                <li><a href="index-1.html">Dashboard v.2</a></li>
-                                                <li><a href="index-3.html">Dashboard v.3</a></li>
-                                                <li><a href="analytics.html">Analytics</a></li>
-                                                <li><a href="widgets.html">Widgets</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Data Master<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul class="collapse dropdown-header-top">
-                                                <li><a href="<?php echo base_url('admin/DataMaster/kelas') ?>">Semua Kelas</a></li>
-                                                <li><a href="<?php echo base_url('admin/DataMaster/pengajar') ?>">Semua Pengajar</a></li>
-                                                <li><a href="<?php echo base_url('admin/DataMaster/siswa') ?>">Semua Siswa</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="<?php echo base_url('siswa/kelassaya') ?>">Kelas Saya</a></li>
+                                        <li><a href="<?php echo base_url('siswa/materi') ?>">Materi</a></li>
+                                        <li><a href="<?php echo base_url('siswa/latihansoal') ?>">Latihan Soal</a></li>
+                                        <li><a href="<?php echo base_url('siswa/forum') ?>">Forum</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>

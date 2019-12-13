@@ -98,28 +98,16 @@
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a title="Landing Page" href="<?php echo base_url('pengajar/kelas') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Kelas</span></a>
+                            <a title="<?= $this->session->userdata('nama_kelas') ?>" href="<?php echo base_url('pengajar/kelas') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non"><?= $this->session->userdata('nama_kelas') ?></span></a>
                         </li>
                         <li>
-                            <a class="has-arrow" href="<?php echo base_url('pengajar/modul') ?>">
-                                   <span class="educate-icon educate-apps icon-wrap"></span>
-                                   <span class="mini-click-non">Modul</span>
-                                </a>
-                            <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="<?php echo base_url('pengajar/modul
-                                ') ?>"><span class="mini-sub-pro">Semua Modul</span></a></li>
-                                <li><a title="Dashboard v.2" href="<?php echo base_url('pengajar/modul/latihansoal') ?>"><span class="mini-sub-pro">Semua Latihan Soal</span></a></li>
-                            </ul>
+                            <a title="Semua Modul" href="<?php echo base_url('pengajar/modul') ?>" aria-expanded="false"><span class="educate-icon educate-apps icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Modul</span></a>
                         </li>
                         <li>
-                            <a class="has-arrow" href="<?php echo base_url('pengajar/peserta') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Siswa</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Semua Siswa" href="<?php echo base_url('pengajar/peserta') ?>"><span class="mini-sub-pro">Semua Siswa</span></a></li>
-                                <li><a title="Nilai" href="<?php echo base_url('pengajar/peserta/nilai') ?>"><span class="mini-sub-pro">Nilai</span></a></li>
-                            </ul>
+                            <a title="Landing Page" href="<?php echo base_url('pengajar/siswa') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Siswa</span></a>
                         </li>
                          <li class="active">
-                            <a title="Landing Page" href="<?php echo base_url('pengajar/diskusi') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Diskusi</span></a>
+                            <a title="Landing Page" href="<?php echo base_url('pengajar/diskusi') ?>" aria-expanded="false"><span class="educate-icon educate-message icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Diskusi</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -293,7 +281,7 @@
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
                                                         </li>
-                                                        <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        <li><a href="<?= base_url('auth/logout') ?>"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -315,18 +303,8 @@
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
                                         <li><a href="<?php echo base_url('pengajar/kelas') ?>">Kelas</a></li>
-                                        <li><a data-toggle="collapse" data-target="#Charts" href="<?php echo base_url('pengajar/modul') ?>">Modul<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul class="collapse dropdown-header-top">
-                                                <li><a href="<?php echo base_url('pengajar/modul') ?>">Semua Modul</a></li>
-                                                <li><a href="<?php echo base_url('pengajar/modul/latihansoal') ?>">Semua Latihan Soal</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a data-toggle="collapse" data-target="#Charts" href="<?php echo base_url('pengajar/siswa') ?>">Siswa<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul class="collapse dropdown-header-top">
-                                                <li><a href="<?php echo base_url('pengajar/siswa') ?>">Semua Siswa</a></li>
-                                                <li><a href="<?php echo base_url('pengajar/siswa/nilai') ?>">Nilai</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="<?php echo base_url('pengajar/modul') ?>">Modul</a></li>
+                                        <li><a href="<?php echo base_url('pengajar/siswa') ?>">Siswa</a></li>
                                         <li><a href="<?php echo base_url('pengajar/diskusi') ?>">Diskusi</a></li>
                                     </ul>
                                 </nav>

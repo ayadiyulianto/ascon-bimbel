@@ -1445,7 +1445,7 @@ ul.tab-custon-design, ul.tab-review-design {
 .course-des{
 	margin:10px 0px;
 }
-.product-buttons button{
+.product-buttons button, .product-buttons a{
 	border:none;
 	background:#006DF0;
 	color:#fff;
@@ -2408,14 +2408,14 @@ ul.two-part-sp li{
 	position: relative;
     top: 6px;
 }
-.sales-report-stn-his button.product-btn-history, button.pd-setting-ed {
+.sales-report-stn-his button.product-btn-history, button.pd-setting-ed, a.pd-setting-ed {
     padding: 5px 10px;
     font-size: 14px;
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,.12);
     background: #f5f5f5;
 }
-button.pd-setting-ed {
+button.pd-setting-ed, a.pd-setting-ed {
     display: inline-block;
     margin-right: 5px;
 }
