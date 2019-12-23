@@ -9,7 +9,7 @@ class Dashboard extends CI_Controller {
 		$this->load->library('session');
 
 		if ($this->session->userdata('role') != 'admin' OR $this->session->userdata('oasse-bimbel') == FALSE) {
-			redirect("auth");
+			redirect(base_url("auth"));
 		}
 
 	}

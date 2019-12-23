@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2019. ASCON - Bimbel Online</p>
+                            <p>Copyright © 2019. OASSE - BIMBEL ONLINE</p>
                         </div>
                     </div>
                 </div>

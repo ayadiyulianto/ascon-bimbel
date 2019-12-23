@@ -1,4 +1,4 @@
-<?php $this->load->view('siswa/header'); ?>
+<?php $this->load->view('siswa/header_main'); ?>
 
         
         <div class="data-table-area mg-t-15 mg-b-15">

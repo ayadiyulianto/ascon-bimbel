@@ -98,7 +98,7 @@
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a title="<?= $this->session->userdata('nama_kelas') ?>" href="<?php echo base_url('pengajar/kelas') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non"><?= $this->session->userdata('nama_kelas') ?></span></a>
+                            <a title="<?= $this->session->userdata('nama_kelas') ?>" href="<?php echo base_url('pengajar/kelas') ?>" aria-expanded="false"><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Kelas</span></a>
                         </li>
                         <li>
                             <a title="Semua Modul" href="<?php echo base_url('pengajar/modul') ?>" aria-expanded="false"><span class="educate-icon educate-apps icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Modul</span></a>

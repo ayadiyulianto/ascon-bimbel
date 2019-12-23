@@ -7,7 +7,7 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                                 <div class="main-sparkline13-hd">
-                                    <h1>Latihan Soal</h1>
+                                    <h1>Daftar Modul</h1>
                                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
                                     <hr>
                                 </div>
@@ -26,10 +26,8 @@
                                         <thead>
                                             <tr>
                                                 <th data-field="state" data-checkbox="true"></th>
-                                                <th data-field="modul">Modul</th>
+                                                <th data-field="name">Nama</th>
                                                 <th data-field="status">Status</th>
-                                                <th data-field="tgl_pengerjaan">Tanggal Pengerjaan</th>
-                                                <th data-field="nilai">Nilai</th>
                                                 <th data-field="action">Aksi</th>
                                             </tr>
                                         </thead>
@@ -39,29 +37,12 @@
                                                 <td></td>
                                                 <td><?= $modul->nama_modul ?></td>
                                                 <td><?php
-                                                    if(!empty($modul->status_latihan)){ echo $modul->status_latihan;}
-                                                    else{ echo "Belum dikerjakan"; }?>
-                                                </td>
-                                                <td><?php
-                                                    if(!empty($modul->tgl_pengerjaan)){ echo $modul->tgl_pengerjaan;}
-                                                    else{ echo "-"; }?>
-                                                </td>
-                                                <td><?php
-                                                    if(!empty($modul->nilai)){ echo $modul->nilai;}
-                                                    else{ echo "-"; }?>
+                                                    if(!empty($modul->status)){ echo $modul->status;}
+                                                    else{ echo "Belum Selesai"; }?>
                                                 </td>
                                                 <td>
                                                     <a href="#" data-toggle="tooltip" title="Deskripsi Modul" class="pd-setting-ed"><i class="fa fa-info" aria-hidden="true"></i></a>
-
-                                                    <?php if(empty($modul->status_latihan) || $modul->status_latihan=="Belum dikerjakan"){ ?>
-                                                    <a href="<?= base_url('siswa/latihansoal/latihan/'. $modul->id) ?>" class="pd-setting-ed">Kerjakan</a>
-
-                                                    <?php } elseif(!empty($modul->status_latihan) && $modul->status_latihan=="Gagal"){ ?>
-                                                    <a href="<?= base_url('siswa/latihansoal/latihan/'. $modul->id) ?>" class="pd-setting-ed">Ulangi</a>
-
-                                                    <?php } elseif(!empty($modul->status_latihan) && $modul->status_latihan=="Berhasil"){ ?>
-                                                    <a href="<?= base_url('siswa/latihansoal/bahas/'. $modul->id_sesi_latihan_terakhir) ?>" data-toggle="tooltip" title="Bahas Latihan Soal" class="pd-setting-ed">Bahas</a>
-                                                    <?php } ?>
+                                                    <a href="<?= base_url('siswa/materi/baca/'.$modul->id.'/'. $modul->id_materi_dibaca_terakhir) ?>" data-toggle="tooltip" title="Materi" class="pd-setting-ed"><i class="fa fa-book" aria-hidden="true"></i> Baca Materi</a>
                                                 </td>
                                             </tr>
                                             <?php } ?>
@@ -74,5 +55,5 @@
                 </div>
             </div>
         </div>
-
+        
 <?php $this->load->view('siswa/footer'); ?>

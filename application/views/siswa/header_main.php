@@ -100,15 +100,6 @@
                         <li>
                             <a href="<?php echo base_url('siswa/kelassaya') ?>" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
                         </li>
-                        <li>
-                            <a href="<?php echo base_url('siswa/materi') ?>" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Materi</span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url('siswa/latihansoal') ?>" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Latihan Soal</span></a>
-                        </li>
-                        <li>
-                            <a href="<?php echo base_url('siswa/forum') ?>" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Forum</span></a>
-                        </li>
                     </ul>
                 </nav>
             </div>
@@ -306,9 +297,6 @@
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
                                         <li><a href="<?php echo base_url('siswa/kelassaya') ?>">Kelas Saya</a></li>
-                                        <li><a href="<?php echo base_url('siswa/materi') ?>">Materi</a></li>
-                                        <li><a href="<?php echo base_url('siswa/latihansoal') ?>">Latihan Soal</a></li>
-                                        <li><a href="<?php echo base_url('siswa/forum') ?>">Forum</a></li>
                                     </ul>
                                 </nav>
                             </div>

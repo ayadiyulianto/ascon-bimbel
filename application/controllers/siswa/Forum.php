@@ -7,7 +7,7 @@ class Forum extends CI_Controller {
 		parent::__construct();
 
 		if ($this->session->userdata('role') != 'siswa' OR $this->session->userdata('oasse-bimbel') == FALSE) {
-			redirect("auth");
+			redirect(base_url("auth"));
 		}
 
 		$this->load->model('PesertaModel');

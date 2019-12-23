@@ -63,9 +63,9 @@
                         </div>
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav pull-right">
-                                <li class="active"><a href="#home">Beranda</a></li>
-                                <li><a href="#courses">Kelas</a></li>
-                                <li><a href="#testmonial">Login</a></li>
+                                <li><a href="<?= base_url() ?>">Beranda</a></li>
+                                <li class="active"><a href="<?= base_url('frontend/kelas') ?>">Kelas</a></li>
+                                <li><a href="<?= base_url('auth') ?>"><?php if($this->session->userdata('oasse-bimbel') == FALSE){ echo "Login"; } else{ echo "Dashboard | ".$this->session->userdata('nama_user'); }?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -155,46 +155,25 @@
                 </div>
             </div>
             <div class="row course-list">
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-1.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Belajar Php Sederhana</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
+                <?php foreach($semuakelas->result() as $kelas){ ?>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                        <div class="single-course mb20">
+                            <img src="<?php echo base_url('assets/images/kelas/'.$kelas->foto) ?>" alt="">
+                            <div class="course-details padding30">
+                                <h3 class="font18"><?= $kelas->nama ?></h3>
+                                <p><?= $kelas->deskripsi_singkat ?></p>
+                                <p class="mt30">
+                                    <?php if(isset($id_kelassaya) && in_array($kelas->id, $id_kelassaya)) { ?>
+                                        <a href="<?= base_url('siswa/kelassaya/pilihKelas/'.$kelas->id) ?>" class="enroll-button">Lanjutkan Belajar</a>
+                                    <?php } else { ?>
+                                        <a href="<?= base_url('siswa/kelassaya/daftarkelas/'.$kelas->id) ?>" class="enroll-button">Daftar Sekarang</a>
+                                    <?php } ?>
+                                    <span class="course-price">$29.99</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-2.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Belajar Android Studio</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-3.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Cara Lulus Tes Wawancara</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-4.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
