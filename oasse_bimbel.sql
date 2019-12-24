@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2019 at 10:40 AM
+-- Generation Time: Dec 24, 2019 at 02:40 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -76,7 +76,8 @@ CREATE TABLE `tb_kelas_user` (
 --
 
 INSERT INTO `tb_kelas_user` (`id`, `id_kelas`, `id_user`, `tgl_dibuat`) VALUES
-(6, 4, 2, '2019-12-13 15:29:13');
+(6, 4, 2, '2019-12-13 15:29:13'),
+(7, 3, 5, '2019-12-14 10:02:49');
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,7 @@ CREATE TABLE `tb_materi` (
   `judul_materi` varchar(100) NOT NULL,
   `materi` text NOT NULL,
   `estimasi_waktu` int(3) NOT NULL,
-  `no_urut` int(2) NOT NULL,
+  `no_urut` int(2) UNSIGNED NOT NULL,
   `terakhir_diperbarui` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -99,7 +100,8 @@ CREATE TABLE `tb_materi` (
 --
 
 INSERT INTO `tb_materi` (`id`, `id_modul`, `judul_materi`, `materi`, `estimasi_waktu`, `no_urut`, `terakhir_diperbarui`) VALUES
-(6, 4, 'Judul Materi 1', '<h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">The standard Lorem Ipsum passage, used since the 1500s</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">Section 1.10.32 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">1914 translation by H. Rackham</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">Section 1.10.33 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">1914 translation by H. Rackham</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\"</p>', 60, 0, '2019-12-13 14:38:27');
+(1, 1, 'Judul Materi 1', '<h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">The standard Lorem Ipsum passage, used since the 1500s</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">Section 1.10.32 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">1914 translation by H. Rackham</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">Section 1.10.33 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">1914 translation by H. Rackham</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\"</p>', 60, 1, '2019-12-13 14:38:27'),
+(6, 4, 'Judul Materi 1 Modul 4', '<h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">The standard Lorem Ipsum passage, used since the 1500s</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">Section 1.10.32 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">1914 translation by H. Rackham</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">Section 1.10.33 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"</p><h3 style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; color: rgb(0, 0, 0); margin-top: 15px; margin-bottom: 15px; font-size: 14px; padding: 0px;\">1914 translation by H. Rackham</h3><p style=\"color: rgb(0, 0, 0); padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">\"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\"</p>', 60, 1, '2019-12-13 14:38:27');
 
 -- --------------------------------------------------------
 
@@ -109,12 +111,18 @@ INSERT INTO `tb_materi` (`id`, `id_modul`, `judul_materi`, `materi`, `estimasi_w
 
 CREATE TABLE `tb_materi_siswa` (
   `id` int(11) NOT NULL,
-  `id_modul` int(11) NOT NULL,
+  `id_materi` int(11) NOT NULL,
   `id_user_siswa` int(11) NOT NULL,
-  `status` enum('Belum','Selesai') NOT NULL,
-  `waktu_mulai` datetime NOT NULL,
-  `waktu_selesai` datetime NOT NULL
+  `waktu_mulai` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `waktu_selesai` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `tb_materi_siswa`
+--
+
+INSERT INTO `tb_materi_siswa` (`id`, `id_materi`, `id_user_siswa`, `waktu_mulai`, `waktu_selesai`) VALUES
+(3, 6, 5, '2019-12-21 13:37:12', '2019-12-21 16:11:35');
 
 -- --------------------------------------------------------
 
@@ -131,7 +139,7 @@ CREATE TABLE `tb_modul` (
   `jml_soal` int(3) NOT NULL,
   `durasi_pengerjaan` int(3) NOT NULL,
   `tgl_dibuat` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `no_urut` int(2) NOT NULL
+  `no_urut` int(2) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -139,7 +147,34 @@ CREATE TABLE `tb_modul` (
 --
 
 INSERT INTO `tb_modul` (`id`, `id_kelas`, `nama_modul`, `deskripsi_singkat`, `passing_grade`, `jml_soal`, `durasi_pengerjaan`, `tgl_dibuat`, `no_urut`) VALUES
-(4, 4, 'Modul 1', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assu', 60, 10, 120, '2019-12-13 14:02:54', 0);
+(1, 3, 'Modul 2', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assu', 60, 10, 120, '2019-12-13 14:02:54', 2),
+(4, 3, 'Modul 1', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assu', 60, 10, 120, '2019-12-13 14:02:54', 1),
+(5, 3, 'Modul 3', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assu', 60, 10, 120, '2019-12-13 14:02:54', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_modul_siswa`
+--
+
+CREATE TABLE `tb_modul_siswa` (
+  `id` int(11) NOT NULL,
+  `id_modul` int(11) NOT NULL,
+  `id_user_siswa` int(11) NOT NULL,
+  `status` enum('Belum Selesai','Selesai') NOT NULL,
+  `id_materi_dibaca_terakhir` int(11) DEFAULT NULL,
+  `status_latihan` enum('Belum dikerjakan','Gagal','Berhasil') NOT NULL,
+  `nilai` int(3) DEFAULT NULL,
+  `tgl_pengerjaan` datetime DEFAULT NULL,
+  `id_sesi_latihan_terakhir` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `tb_modul_siswa`
+--
+
+INSERT INTO `tb_modul_siswa` (`id`, `id_modul`, `id_user_siswa`, `status`, `id_materi_dibaca_terakhir`, `status_latihan`, `nilai`, `tgl_pengerjaan`, `id_sesi_latihan_terakhir`) VALUES
+(1, 4, 5, 'Belum Selesai', NULL, 'Berhasil', 100, '2019-12-21 13:40:34', 8);
 
 -- --------------------------------------------------------
 
@@ -165,12 +200,19 @@ CREATE TABLE `tb_sesi_latihan` (
   `id` int(11) NOT NULL,
   `id_modul` int(11) NOT NULL,
   `id_user_siswa` int(11) NOT NULL,
-  `status` enum('Gagal','Berhasil') NOT NULL,
+  `status` enum('Belum','Gagal','Berhasil') NOT NULL,
   `nilai` int(3) NOT NULL,
-  `tgl_mulai` datetime NOT NULL,
-  `tgl_selesai` datetime NOT NULL,
+  `tgl_mulai` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `tgl_selesai` datetime DEFAULT NULL,
   `passing_grade` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `tb_sesi_latihan`
+--
+
+INSERT INTO `tb_sesi_latihan` (`id`, `id_modul`, `id_user_siswa`, `status`, `nilai`, `tgl_mulai`, `tgl_selesai`, `passing_grade`) VALUES
+(8, 4, 5, 'Berhasil', 100, '2019-12-21 13:40:34', '2019-12-21 13:43:38', 60);
 
 -- --------------------------------------------------------
 
@@ -182,9 +224,16 @@ CREATE TABLE `tb_sesi_soal` (
   `id` int(11) NOT NULL,
   `id_sesi` int(11) NOT NULL,
   `id_soal` int(11) NOT NULL,
-  `jawaban` varchar(200) NOT NULL,
-  `status` enum('belum','salah','benar') NOT NULL
+  `jawaban` varchar(250) NOT NULL,
+  `status` enum('belum','sudah','salah','benar') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_sesi_soal`
+--
+
+INSERT INTO `tb_sesi_soal` (`id`, `id_sesi`, `id_soal`, `jawaban`, `status`) VALUES
+(2, 8, 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,', 'benar');
 
 -- --------------------------------------------------------
 
@@ -196,10 +245,10 @@ CREATE TABLE `tb_soal` (
   `id` int(11) NOT NULL,
   `id_modul` int(11) NOT NULL,
   `soal` text NOT NULL,
-  `benar_1` varchar(200) NOT NULL,
-  `salah_1` varchar(200) NOT NULL,
-  `salah_2` varchar(200) NOT NULL,
-  `salah_3` varchar(200) NOT NULL,
+  `benar_1` varchar(250) NOT NULL,
+  `salah_1` varchar(250) NOT NULL,
+  `salah_2` varchar(250) NOT NULL,
+  `salah_3` varchar(250) NOT NULL,
   `pembahasan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -279,7 +328,7 @@ ALTER TABLE `tb_materi`
 --
 ALTER TABLE `tb_materi_siswa`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `kode_modul` (`id_modul`),
+  ADD KEY `kode_modul` (`id_materi`),
   ADD KEY `id_user_peserta` (`id_user_siswa`);
 
 --
@@ -288,6 +337,15 @@ ALTER TABLE `tb_materi_siswa`
 ALTER TABLE `tb_modul`
   ADD PRIMARY KEY (`id`),
   ADD KEY `kode_kelas` (`id_kelas`);
+
+--
+-- Indexes for table `tb_modul_siswa`
+--
+ALTER TABLE `tb_modul_siswa`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kode_modul` (`id_modul`),
+  ADD KEY `id_user_siswa` (`id_user_siswa`) USING BTREE,
+  ADD KEY `id_sesi_latihan_terakhir` (`id_sesi_latihan_terakhir`);
 
 --
 -- Indexes for table `tb_review`
@@ -345,7 +403,7 @@ ALTER TABLE `tb_kelas`
 -- AUTO_INCREMENT for table `tb_kelas_user`
 --
 ALTER TABLE `tb_kelas_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tb_materi`
 --
@@ -355,12 +413,17 @@ ALTER TABLE `tb_materi`
 -- AUTO_INCREMENT for table `tb_materi_siswa`
 --
 ALTER TABLE `tb_materi_siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tb_modul`
 --
 ALTER TABLE `tb_modul`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `tb_modul_siswa`
+--
+ALTER TABLE `tb_modul_siswa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tb_review`
 --
@@ -370,12 +433,12 @@ ALTER TABLE `tb_review`
 -- AUTO_INCREMENT for table `tb_sesi_latihan`
 --
 ALTER TABLE `tb_sesi_latihan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tb_sesi_soal`
 --
 ALTER TABLE `tb_sesi_soal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tb_soal`
 --
@@ -413,7 +476,7 @@ ALTER TABLE `tb_materi`
 -- Constraints for table `tb_materi_siswa`
 --
 ALTER TABLE `tb_materi_siswa`
-  ADD CONSTRAINT `tb_materi_siswa_ibfk_1` FOREIGN KEY (`id_modul`) REFERENCES `tb_materi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tb_materi_siswa_ibfk_1` FOREIGN KEY (`id_materi`) REFERENCES `tb_materi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tb_materi_siswa_ibfk_2` FOREIGN KEY (`id_user_siswa`) REFERENCES `tb_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
@@ -421,6 +484,13 @@ ALTER TABLE `tb_materi_siswa`
 --
 ALTER TABLE `tb_modul`
   ADD CONSTRAINT `tb_modul_ibfk_1` FOREIGN KEY (`id_kelas`) REFERENCES `tb_kelas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tb_modul_siswa`
+--
+ALTER TABLE `tb_modul_siswa`
+  ADD CONSTRAINT `tb_modul_siswa_ibfk_1` FOREIGN KEY (`id_user_siswa`) REFERENCES `tb_user` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `tb_modul_siswa_ibfk_2` FOREIGN KEY (`id_modul`) REFERENCES `tb_modul` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tb_review`

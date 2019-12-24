@@ -20,7 +20,7 @@ class PengajarModel extends CI_Model {
 	// KELAS
 
 	public function getSemuaKelas($id_user){
-		$this->db->select('tb_kelas.id, nama, tgl_dibuat, deskripsi_singkat, foto');
+		$this->db->select('tb_kelas.id, nama, tb_kelas.tgl_dibuat, deskripsi_singkat, foto');
 		$this->db->from('tb_kelas');
 		$this->db->join('tb_kelas_user', 'tb_kelas_user.id_kelas=tb_kelas.id');
 		$this->db->where('tb_kelas_user.id_user', $id_user);

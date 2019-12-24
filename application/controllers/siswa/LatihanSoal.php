@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class LatihanSoal extends CI_Controller {
+class Latihansoal extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
@@ -10,6 +10,10 @@ class LatihanSoal extends CI_Controller {
 
 		if ($this->session->userdata('role') != 'siswa' OR $this->session->userdata('oasse-bimbel') == FALSE) {
 			redirect(base_url("auth"));
+		}
+
+		if (!$this->session->has_userdata('id_kelas')) {
+			redirect(base_url("kelassaya"));
 		}
 	}
 
@@ -135,6 +139,7 @@ class LatihanSoal extends CI_Controller {
 		$listnomorsoal = $this->SiswaModel->getNomorSoal($id_sesi_latihan)->result_array();
 		$data['listnomorsoal'] = $listnomorsoal;
 		$id_soal = $listnomorsoal[$nomor-1]['id_soal'];
+		$data['id_soal'] = $id_soal;
 		$data['soal'] = $this->SiswaModel->getSoalPembahasanById($id_soal);
 		$data['jawaban'] = $this->SiswaModel->getJawabanByIdSoal($id_soal);
 		$this->load->view('siswa/view_pembahasan', $data);

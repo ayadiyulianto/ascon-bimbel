@@ -12,6 +12,10 @@ class Materi extends CI_Controller {
 		if ($this->session->userdata('role') != 'siswa' OR $this->session->userdata('oasse-bimbel') == FALSE) {
 			redirect(base_url("auth"));
 		}
+		
+		if (!$this->session->has_userdata('id_kelas')) {
+			redirect(base_url("kelassaya"));
+		}
 	}
 
 	public function index()
