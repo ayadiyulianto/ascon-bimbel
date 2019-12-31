@@ -14,7 +14,7 @@ class Materi extends CI_Controller {
 		}
 		
 		if (!$this->session->has_userdata('id_kelas')) {
-			redirect(base_url("kelassaya"));
+			redirect(base_url("siswa/kelassaya"));
 		}
 	}
 
@@ -36,6 +36,7 @@ class Materi extends CI_Controller {
 		$this->SiswaModel->mulaiMateri($id_siswa, $id_materi);
 		$data['id_siswa'] = $id_siswa;
 		$data['id_modul'] = $id_modul;
+		$data['id_materi'] = $id_materi;
 		$data['materi'] = $this->SiswaModel->getMateriById($id_materi);
 		$data['listmateri'] = $this->SiswaModel->getListMateri($id_modul);
 		$this->load->view('siswa/view_baca_materi', $data);

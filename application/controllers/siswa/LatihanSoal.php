@@ -13,7 +13,7 @@ class Latihansoal extends CI_Controller {
 		}
 
 		if (!$this->session->has_userdata('id_kelas')) {
-			redirect(base_url("kelassaya"));
+			redirect(base_url("siswa/kelassaya"));
 		}
 	}
 

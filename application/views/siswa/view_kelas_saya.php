@@ -1,5 +1,4 @@
 <?php $this->load->view('siswa/header_main'); ?>
-
         
         <div class="data-table-area mg-t-15 mg-b-15">
             <div class="container-fluid">
@@ -22,7 +21,7 @@
             <div class="container-fluid">
                 <div class="row mg-b-15">
                     <?php foreach($kelassaya->result() as $kelas){ ?>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner">
                             <div class="courses-title">
                                 <a href="#"><img src="<?php echo base_url('assets/images/kelas/'.$kelas->foto) ?>" alt=""></a>
@@ -36,6 +35,7 @@
                                 <p><b>Progress:</b> 90%</p>
                             </div>
                             <div class="product-buttons">
+                                <a href="<?php echo base_url('siswa/kelassaya/tentang/'.$kelas->id) ?>">Tentang Kelas Ini</a>
                                 <a href="<?php echo base_url('siswa/kelassaya/pilihkelas/'.$kelas->id) ?>">Lanjutkan Belajar</a>
                             </div>
                         </div>

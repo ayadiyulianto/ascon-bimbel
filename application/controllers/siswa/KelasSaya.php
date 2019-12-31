@@ -20,6 +20,13 @@ class Kelassaya extends CI_Controller {
 		$this->load->view('siswa/view_kelas_saya', $data);
 	}
 
+	public function tentang($id)
+	{
+		$data['kelas'] = $this->SiswaModel->getKelas($id);
+		$data['silabus'] = $this->SiswaModel->getModul($id);
+		$this->load->view('siswa/view_kelas_detail', $data);
+	}
+
 	public function pilihKelas($id)
 	{
 		$this->session->set_userdata('id_kelas', $id);

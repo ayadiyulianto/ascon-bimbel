@@ -36,6 +36,13 @@ class SiswaModel extends CI_Model {
 		return $this->db->get('tb_kelas')->row();
 	}
 
+	public function getModul($id_kelas){
+		$this->db->select('nama_modul, deskripsi_singkat');
+		$this->db->where('id_kelas', $id_kelas);
+		$this->db->order_by('no_urut');
+		return $this->db->get('tb_modul');
+	}
+
 	// MATERI
 
 	public function getModulByKelas($id_user, $id_kelas){
@@ -220,9 +227,15 @@ class SiswaModel extends CI_Model {
 
 	// FORUM
 
-	public function getForum(){
+	public function getForum($id_kelas){
+		$this->db->where('id_kelas', $id_kelas);
 		$this->db->order_by('tgl_dibuat','DESC');
 		return $this->db->get('tb_forum');
+	}
+
+	public function getForumById($id){
+		$this->db->where('id', $id);
+		return $this->db->get('tb_forum')->row();
 	}
 
 }

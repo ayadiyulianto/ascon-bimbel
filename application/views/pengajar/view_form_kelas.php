@@ -9,7 +9,7 @@
                             <div class="sparkline8-graph">
                                 <div class="basic-login-form-ad">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="basic-login-inner">
                                                 <form action="<?= base_url('pengajar/kelas/simpanKelas') ?>" method="post" id="formTambah" enctype="multipart/form-data">
                                                     <h3>Detail Kelas</h3>
@@ -44,11 +44,6 @@
                                                         </div>
                                                     </div>
                                                 </form>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="basic-login-inner">
-                                                <h3>Ulasan Kelas</h3>
                                             </div>
                                         </div>
                                     </div>

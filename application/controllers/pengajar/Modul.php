@@ -13,6 +13,10 @@ class Modul extends CI_Controller {
 			redirect(base_url("auth"));
 		}
 
+		if (!$this->session->has_userdata('id_kelas')) {
+			redirect(base_url("pengajar/kelas"));
+		}
+
 	}
 
 	public function index()

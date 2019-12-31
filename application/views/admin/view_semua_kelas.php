@@ -27,7 +27,7 @@
             <div class="container-fluid">
                 <div class="row mg-b-15">
                     <?php foreach($semuakelas->result() as $kelas){ ?>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="courses-inner">
                             <div class="courses-title">
                                 <a href="#"><img src="<?php echo base_url('assets/images/kelas/'.$kelas->foto) ?>" alt=""></a>

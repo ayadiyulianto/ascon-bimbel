@@ -11,7 +11,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <div class="button-ad-wrap mg-t-15">
+                        <div class="button-ad-wrap">
                             <!-- <div class="button-ap-list responsive-btn">
                                 <button type="button" class="btn btn-custon-rounded-three btn-primary"><i class="fa fa-arrow-left edu-informatio" aria-hidden="true"></i> Sebelumnya</button>
                                 <div style="float: right;"><button type="button" class="btn btn-custon-rounded-three btn-primary">Selanjutnya <i class="fa fa-arrow-right edu-informatio" aria-hidden="true"></i></button></div>
@@ -37,17 +37,13 @@
                                 </li>
                             </ul>
                             <div class="tab-content">
-                                <div id="TabPembahasan" class="tab-pane in active animated flipInX custon-tab-style1">
+                                <div id="TabPembahasan" class="tab-pane in active animated fadeIn custon-tab-style1">
                                     <?= $soal->pembahasan ?>
                                 </div>
-                                <div id="TabDiskusi" class="tab-pane animated flipInX custon-tab-style1">
+                                <div id="TabDiskusi" class="tab-pane animated fadeIn custon-tab-style1">
                                     <div id="disqus_thread"></div>
                                     <script>
-
-                                    /**
-                                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                                    
+                                        
                                     var disqus_config = function () {
                                     this.page.url = '<?= base_url('soal/'.$id_soal) ?>';  // Replace PAGE_URL with your page's canonical URL variable
                                     this.page.identifier = '<?= 'soal_'.$id_soal ?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable

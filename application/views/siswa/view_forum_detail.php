@@ -9,21 +9,14 @@
                                 <div class="main-sparkline13-hd">
                                     <h1>Forum Diskusi</h1>
                                     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-                                    <div class="add-product">
-                                        <a href="#" data-toggle="modal" data-target="#PrimaryModalhdbgcl">Buat Diskusi Baru</a>
-                                    </div>
-                                    <div class="visible-xs">
-                                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#PrimaryModalhdbgcl">Buat Diskusi Baru</a>
-                                    </div>
                                     <hr>
                                 </div>
                             </div>
                             <div class="sparkline13-graph">
-                                <div class="row">
+                                <div class="row mg-b-15">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="review-content-section">
                                             <div class="chat-discussion" style="height: auto">
-                                                <?php foreach($semuaforum->result() as $forum){ ?>
                                                 <div class="chat-message">
                                                     <div class="profile-hdtc">
                                                          <img class="message-avatar" src="<?= base_url('kiaalap/img/product/pro4.jpg') ?>" alt="">
@@ -38,9 +31,31 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <?php } ?>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="sparkline13-graph">
+                                <div class="row mg-t-15">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div id="disqus_thread"></div>
+                                        <script>
+                                            
+                                        var disqus_config = function () {
+                                        this.page.url = '<?= base_url('forum/'.$id) ?>';  // Replace PAGE_URL with your page's canonical URL variable
+                                        this.page.identifier = '<?= 'forum_'.$id ?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                        };
+                                        
+                                        (function() { // DON'T EDIT BELOW THIS LINE
+                                        var d = document, s = d.createElement('script');
+                                        s.src = 'https://oasse-bimbel.disqus.com/embed.js';
+                                        s.setAttribute('data-timestamp', +new Date());
+                                        (d.head || d.body).appendChild(s);
+                                        })();
+                                        </script>
+                                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                                     </div>
                                 </div>
                             </div>
