@@ -25,6 +25,22 @@ class Forum extends CI_Controller {
 		$this->load->view('siswa/view_forum', $data);
 	}
 
+	public function buatDiskusi()
+	{
+		$data['id_user_pembuat'] = $this->session->userdata('id_user');
+		$data['id_kelas'] = $this->session->userdata('id_kelas');
+		$data['judul'] = $this->input->post('judul');
+		$data['isi'] = $this->input->post('isi');
+		$insert = $this->SiswaModel->insert('tb_forum', $data);
+		if($insert){
+			$this->session->set_flashdata('info','Berhasil membuat diskusi baru');
+			redirect(base_url('siswa/forum'));
+		}else{
+			$this->session->set_flashdata('info','Gagal membuat diskusi baru');
+			redirect(base_url('siswa/forum'));
+		}
+	}
+
 	public function detail($id)
 	{
 		$data['id'] = $id;

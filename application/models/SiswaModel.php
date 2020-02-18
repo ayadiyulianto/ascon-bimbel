@@ -43,6 +43,28 @@ class SiswaModel extends CI_Model {
 		return $this->db->get('tb_modul');
 	}
 
+	public function getRating($id_kelas){
+		$this->db->select('cast(AVG(rating) as decimal(6, 1)) as rating, COUNT(*) as count');
+		$this->db->where('id_kelas', $id_kelas);
+		return $this->db->get('tb_review')->row();
+	}
+
+	public function getReview($id_kelas){
+		$this->db->select('tb_review.*, tb_user.nama');
+		$this->db->from('tb_review');
+		$this->db->join('tb_user', 'tb_user.id=tb_review.id_user');
+		$this->db->where('id_kelas', $id_kelas);
+		$this->db->limit(5);
+		$this->db->order_by('tgl_dibuat');
+		return $this->db->get();
+	}
+
+	public function getReviewByUser($id_kelas, $id_user){
+		$this->db->where('id_kelas', $id_kelas);
+		$this->db->where('id_user', $id_user);
+		return $this->db->get('tb_review')->row();
+	}
+
 	// MATERI
 
 	public function getModulByKelas($id_user, $id_kelas){
@@ -238,4 +260,16 @@ class SiswaModel extends CI_Model {
 		return $this->db->get('tb_forum')->row();
 	}
 
+	// DISC
+
+	public function getDisc(){
+		$this->db->limit(20);
+		return $this->db->get('tb_disc_soal');
+	}
+
+	public function getDiscLastTest($id_user){
+		$this->db->where('id_user', $id_user);
+		$this->db->order_by('tgl_pengerjaan', 'DESC');
+		return $this->db->get('tb_disc_sesi')->row();
+	}
 }

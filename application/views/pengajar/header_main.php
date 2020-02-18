@@ -39,9 +39,6 @@
     <!-- educate icon CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/educate-custon-icon.css') ?>">
-    <!-- morrisjs CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/morrisjs/morris.css') ?>">
     <!-- mCustomScrollbar CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/scrollbar/jquery.mCustomScrollbar.min.css') ?>">

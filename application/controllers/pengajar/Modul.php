@@ -40,6 +40,16 @@ class Modul extends CI_Controller {
 		}
 	}
 
+	public function urutkanModul()
+	{
+		$modulOrder = explode(',', $this->input->post('modulOrder'));
+		for($i=1; $i<=count($modulOrder); $i++){
+			$data[] = array('id'=> $modulOrder[$i-1], 'no_urut'=>$i);
+		}
+		$this->PengajarModel->updateUrutanModul($data);
+		redirect(base_url('pengajar/modul'));
+	}
+
 	public function formModul($id)
 	{	
 		$data['modul'] = $this->PengajarModel->getModul($id);

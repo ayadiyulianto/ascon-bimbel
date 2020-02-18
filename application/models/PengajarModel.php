@@ -40,9 +40,14 @@ class PengajarModel extends CI_Model {
 
 	// MODUL
 
+	public function updateUrutanModul($data){
+		return $this->db->update_batch('tb_modul', $data, 'id');
+	}
+
 	public function getModulByKelas($id_kelas){
 		$this->db->select('id, nama_modul, deskripsi_singkat');
 		$this->db->where('id_kelas', $id_kelas);
+		$this->db->order_by('no_urut');
 		return $this->db->get('tb_modul');
 	}
 
@@ -82,6 +87,38 @@ class PengajarModel extends CI_Model {
 		$this->db->where('tb_kelas_user.id_kelas', $id_kelas);
 		$this->db->where('tb_user.role', 'siswa');
 		return $this->db->get();
+	}
+
+	public function getModulMateriByKelas($id_user, $id_kelas){
+		$this->db->select('tb_modul.id, nama_modul, deskripsi_singkat, status, id_materi_dibaca_terakhir');
+		$this->db->from('tb_modul_siswa');
+		$this->db->join('tb_modul', 'tb_modul.id=tb_modul_siswa.id_modul AND tb_modul_siswa.id_user_siswa='.$id_user, 'right');
+		$this->db->where('tb_modul.id_kelas', $id_kelas);
+		$this->db->order_by('no_urut');
+		return $this->db->get();
+	}
+
+	public function getModulSoalByKelas($id_user, $id_kelas){
+		$this->db->select('tb_modul.id, nama_modul, deskripsi_singkat, status_latihan, nilai, tgl_pengerjaan, id_sesi_latihan_terakhir');
+		$this->db->from('tb_modul_siswa');
+		$this->db->join('tb_modul', 'tb_modul.id=tb_modul_siswa.id_modul AND tb_modul_siswa.id_user_siswa='.$id_user, 'right');
+		$this->db->where('tb_modul.id_kelas', $id_kelas);
+		$this->db->order_by('no_urut');
+		return $this->db->get();
+	}
+
+	// DISKUSI
+
+
+	public function getDiskusi($id_kelas){
+		$this->db->where('id_kelas', $id_kelas);
+		$this->db->order_by('tgl_dibuat','DESC');
+		return $this->db->get('tb_forum');
+	}
+
+	public function getDiskusiById($id){
+		$this->db->where('id', $id);
+		return $this->db->get('tb_forum')->row();
 	}
 
 }

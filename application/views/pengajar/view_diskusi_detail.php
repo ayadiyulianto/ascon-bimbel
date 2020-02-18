@@ -1,4 +1,4 @@
-<?php $this->load->view('siswa/header'); ?>
+<?php $this->load->view('pengajar/header'); ?>
 
         <div class="data-table-area mg-t-15 mg-b-15">
             <div class="container-fluid">
@@ -22,9 +22,9 @@
                                                          <img class="message-avatar" src="<?= base_url('kiaalap/img/product/pro4.jpg') ?>" alt="">
                                                     </div>
                                                     <div class="message">
-                                                        <a class="message-author" href="<?= base_url('siswa/forum/detail/'.$forum->id) ?>"> <?= $forum->judul ?> </a>
-                                                        <span class="message-date"> <?= $forum->tgl_dibuat ?> </span>
-                                                        <span class="message-content"> <?= $forum->isi ?> </span>
+                                                        <a class="message-author" href="<?= base_url('siswa/diskusi/detail/'.$diskusi->id) ?>"> <?= $diskusi->judul ?> </a>
+                                                        <span class="message-date"> <?= $diskusi->tgl_dibuat ?> </span>
+                                                        <span class="message-content"> <?= $diskusi->isi ?> </span>
                                                         <div class="m-t-md mg-t-10">
                                                             <a class="btn btn-xs btn-default"><i class="fa fa-book"></i> Modul 1</a>
                                                             <a class="btn btn-xs btn-default"><i class="fa fa-comments"></i> 1 Komentar</a>
@@ -41,8 +41,8 @@
                                 <div class="row mg-t-15">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div id="disqus_thread"></div>
-                                        
                                         <script>
+                                            
                                         var disqus_config = function () {
                                         this.page.url = '<?= base_url('forum/'.$id) ?>';  // Replace PAGE_URL with your page's canonical URL variable
                                         this.page.identifier = '<?= 'forum_'.$id ?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
@@ -65,4 +65,4 @@
             </div>
         </div>
 
-<?php $this->load->view('siswa/footer'); ?>
+<?php $this->load->view('pengajar/footer'); ?>

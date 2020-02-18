@@ -39,9 +39,6 @@
     <!-- educate icon CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/educate-custon-icon.css') ?>">
-    <!-- morrisjs CSS
-        ============================================ -->
-    <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/morrisjs/morris.css') ?>">
     <!-- mCustomScrollbar CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url('kiaalap/css/scrollbar/jquery.mCustomScrollbar.min.css') ?>">
@@ -99,6 +96,9 @@
                     <ul class="metismenu" id="menu1">
                         <li>
                             <a href="<?php echo base_url('siswa/kelassaya') ?>" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Kelas Saya</span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url('siswa/disc') ?>" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Test DISC</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -297,6 +297,7 @@
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
                                         <li><a href="<?php echo base_url('siswa/kelassaya') ?>">Kelas Saya</a></li>
+                                        <li><a href="<?php echo base_url('siswa/disc') ?>">Test DISC</a></li>
                                     </ul>
                                 </nav>
                             </div>

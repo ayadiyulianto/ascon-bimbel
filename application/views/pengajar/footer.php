@@ -14,6 +14,7 @@
     <!-- jquery
         ============================================ -->
     <script src="<?php echo base_url('kiaalap/js/vendor/jquery-1.12.4.min.js') ?>"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- bootstrap JS
         ============================================ -->
     <script src="<?php echo base_url('kiaalap/js/bootstrap.min.js') ?>"></script>
@@ -60,11 +61,6 @@
     <script src="<?php echo base_url('kiaalap/js/data-table/bootstrap-table-export.js') ?>"></script>
     <!-- morrisjs JS
         ============================================ -->
-    <script src="<?php echo base_url('kiaalap/js/morrisjs/raphael-min.js') ?>"></script>
-    <script src="<?php echo base_url('kiaalap/js/morrisjs/morris.js') ?>"></script>
-    <script src="<?php echo base_url('kiaalap/js/morrisjs/morris-active.js') ?>"></script>
-    <!-- morrisjs JS
-        ============================================ -->
     <script src="<?php echo base_url('kiaalap/js/sparkline/jquery.sparkline.min.js') ?>"></script>
     <script src="<?php echo base_url('kiaalap/js/sparkline/jquery.charts-sparkline.js') ?>"></script>
     <script src="<?php echo base_url('kiaalap/js/sparkline/sparkline-active.js') ?>"></script>
@@ -95,13 +91,21 @@
 
         $('#summernote1').summernote({
             height: "200px"
-        })
-    </script>
+        });
 
-    <script type="text/javascript">
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $( "#sortable" ).sortable({
+                placeholder: "ui-state-highlight",
+                update: function(event, ui) {
+                    var order = $("#sortable").sortable("toArray").toString();
+                    $('#modulOrder').val(order);
+                }
+            });
+
+            $( "#sortable" ).disableSelection();
+        });
     </script>
     
 </body>

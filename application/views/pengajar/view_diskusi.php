@@ -1,193 +1,46 @@
- <div class="contacts-area mg-t-15 mg-b-15">
+<?php $this->load->view('pengajar/header'); ?>
+
+        <div class="data-table-area mg-t-15 mg-b-15">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="tab-content-details mg-b-30">
-                            <h2>Forum</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs responsive-mg-b-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                                <h3><a href="#">Postingan 1</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
+                        <div class="sparkline13-list">
+                            <div class="sparkline13-hd">
+                                <div class="main-sparkline13-hd">
+                                    <h1>Forum Diskusi</h1>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                    <div class="add-product">
+                                        <a href="#" data-toggle="modal" data-target="#PrimaryModalhdbgcl">Buat Diskusi Baru</a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs responsive-mg-b-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                                <h3><a href="#">Postingan 2</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
+                                    <div class="visible-xs">
+                                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#PrimaryModalhdbgcl">Buat Diskusi Baru</a>
                                     </div>
+                                    <hr>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs responsive-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                                <h3><a href="#">Postingan 3</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs res-tablet-mg-t-30 dk-res-t-pro-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                               <h3><a href="#">Postingan 4</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs mg-t-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                                <h3><a href="#">Postingan 5</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs mg-t-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                                <h3><a href="#">Postingan 6</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs mg-t-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                                <h3><a href="#">Postingan 7</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="hpanel hblue contact-panel contact-panel-cs mg-t-30">
-                            <div class="panel-body custom-panel-jw">
-                                <div class="social-media-in">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                                <h3><a href="#">Postingan 8</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet of, consectetur adipiscing elitable.
-                                    Vestibulum tincidunt est vitae ultrices accumsan.
-                                </p>
-                            </div>
-                            <div class="panel-footer contact-footer">
-                                <div class="professor-stds-int">
-                                    <div class="professor-stds">
-                                        <div class="contact-stat"><span>Lihat Selengkapnya</span></div>
+                            <div class="sparkline13-graph">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="review-content-section">
+                                            <div class="chat-discussion" style="height: auto">
+                                                <?php foreach($semuadiskusi->result() as $diskusi){ ?>
+                                                <div class="chat-message">
+                                                    <div class="profile-hdtc">
+                                                         <img class="message-avatar" src="<?= base_url('kiaalap/img/product/pro4.jpg') ?>" alt="">
+                                                    </div>
+                                                    <div class="message">
+                                                        <a class="message-author" href="<?= base_url('pengajar/diskusi/detail/'.$diskusi->id) ?>"> <?= $diskusi->judul ?> </a>
+                                                        <span class="message-date"> <?= $diskusi->tgl_dibuat ?> </span>
+                                                        <span class="message-content"> <?= $diskusi->isi ?> </span>
+                                                        <div class="m-t-md mg-t-10">
+                                                            <a class="btn btn-xs btn-default"><i class="fa fa-book"></i> Modul 1</a>
+                                                            <a class="btn btn-xs btn-default"><i class="fa fa-comments"></i> 1 Komentar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,3 +49,56 @@
                 </div>
             </div>
         </div>
+
+        <div id="PrimaryModalhdbgcl" class="modal modal-edu-general default-popup-PrimaryModal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header header-color-modal bg-color-1">
+                        <h4 class="modal-title">Buat Diskusi Baru</h4>
+                        <div class="modal-close-area modal-close-df">
+                            <a class="close" data-dismiss="modal" href="#"><i class="fa fa-close"></i></a>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-login-form-inner">
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="basic-login-inner modal-basic-inner">
+                                        <form action="<?= base_url('pengajar/diskusi/buatdiskusi') ?>" method="post" id="formTambah">
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <label class="login2">Judul Diskusi</label>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <textarea name="judul" class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group-inner">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <label class="login2">Uraian</label>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <textarea name="isi" class="form-control" rows="7"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a data-dismiss="modal" href="#">Batal</a>
+                        <a onclick="document.getElementById('formTambah').submit();" href="#">Tambah</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<?php $this->load->view('pengajar/footer'); ?>

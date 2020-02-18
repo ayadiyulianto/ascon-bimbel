@@ -28,11 +28,15 @@ class Siswa extends CI_Controller {
 
 	public function progressBelajar($id_siswa)
 	{
-		$this->load->view('pengajar/view_progress_belajar');
+		$id_kelas = $this->session->userdata('id_kelas');
+		$data['semuamodul'] = $this->PengajarModel->getModulMateriByKelas($id_siswa, $id_kelas);
+		$this->load->view('pengajar/view_progress_siswa', $data);
 	}
 
 	public function hasilLatihan($id_siswa)
 	{
-		$this->load->view('pengajar/view_hasil_latihan');
+		$id_kelas = $this->session->userdata('id_kelas');
+		$data['semuamodul'] = $this->PengajarModel->getModulSoalByKelas($id_siswa, $id_kelas);
+		$this->load->view('pengajar/view_hasil_latihan_siswa', $data);
 	}
 }
