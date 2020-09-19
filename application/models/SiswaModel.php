@@ -3,273 +3,168 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SiswaModel extends CI_Model {
 
-	// Basic CRUD
+	// KELAS
 
-	public function getWhere($table, $where){
-		return $this->db->get_where($table, $where);
+	function getKelasSaya($id_user){
+		return $this->db->select('view_kelas.*, kelas_siswa.waktu_post, kelas_siswa.has_access, kelas_siswa.is_finished')
+		->from('view_kelas')
+		->join('kelas_siswa', 'kelas_siswa.id_kelas=view_kelas.id_kelas')
+		->where(array('kelas_siswa.id_user'=>$id_user))
+		->order_by('kelas_siswa.waktu_post desc')
+		->get();
 	}
 
-	public function insert($table, $data){
-		return $this->db->insert($table, $data);
+	function getPembelian($id_user){
+		return $this->db->select('id_invoice, pembelian.id_user, nama_user, pembelian.id_kelas, nama_kelas, slug, nama_kategori, view_kelas.foto, pembelian.status, total_bayar, jenis_bayar, tujuan_bayar, waktu_register')
+		->from('pembelian')
+		->join('view_kelas', 'view_kelas.id_kelas=pembelian.id_kelas')
+		->join('user', 'user.id_user=pembelian.id_user')
+		->where(array('pembelian.id_user'=>$id_user))
+		->order_by('waktu_register desc')
+		->get();
 	}
 
-	public function update($table, $data, $where){
-		return $this->db->update($table, $data, $where);
-	}
-
-	public function delete($table, $where){
-		return $this->db->delete($table, $where);
-	}
-
-	// KELAS SAYA
-
-	public function getKelasSaya($id_user){
-		$this->db->select('tb_kelas.id, nama, tb_kelas_user.tgl_dibuat, deskripsi_singkat, foto');
-		$this->db->from('tb_kelas_user');
-		$this->db->join('tb_kelas', 'tb_kelas.id=tb_kelas_user.id_kelas');
-		$this->db->where('tb_kelas_user.id_user', $id_user);
-		return $this->db->get();
-	}
-	
-	public function getKelas($id){
-		$this->db->where('id', $id);
-		return $this->db->get('tb_kelas')->row();
-	}
-
-	public function getModul($id_kelas){
-		$this->db->select('nama_modul, deskripsi_singkat');
-		$this->db->where('id_kelas', $id_kelas);
-		$this->db->order_by('no_urut');
-		return $this->db->get('tb_modul');
-	}
-
-	public function getRating($id_kelas){
-		$this->db->select('cast(AVG(rating) as decimal(6, 1)) as rating, COUNT(*) as count');
-		$this->db->where('id_kelas', $id_kelas);
-		return $this->db->get('tb_review')->row();
-	}
-
-	public function getReview($id_kelas){
-		$this->db->select('tb_review.*, tb_user.nama');
-		$this->db->from('tb_review');
-		$this->db->join('tb_user', 'tb_user.id=tb_review.id_user');
-		$this->db->where('id_kelas', $id_kelas);
-		$this->db->limit(5);
-		$this->db->order_by('tgl_dibuat');
-		return $this->db->get();
-	}
-
-	public function getReviewByUser($id_kelas, $id_user){
-		$this->db->where('id_kelas', $id_kelas);
-		$this->db->where('id_user', $id_user);
-		return $this->db->get('tb_review')->row();
-	}
-
-	// MATERI
-
-	public function getModulByKelas($id_user, $id_kelas){
-		$this->db->select('tb_modul.id, nama_modul, deskripsi_singkat, status, id_materi_dibaca_terakhir');
-		$this->db->from('tb_modul_siswa');
-		$this->db->join('tb_modul', 'tb_modul.id=tb_modul_siswa.id_modul AND tb_modul_siswa.id_user_siswa='.$id_user, 'right');
-		$this->db->where('tb_modul.id_kelas', $id_kelas);
-		$this->db->order_by('no_urut');
-		return $this->db->get();
-	}
-
-	public function getDefaultMateriByModul($id_modul){
-		$this->db->select('id');
-		$this->db->where('id_modul', $id_modul);
-		$this->db->where('no_urut', 1);
-		$this->db->order_by('no_urut');
-		return $this->db->get('tb_materi')->row()->id;
-	}
-
-	public function mulaiMateri($id_siswa, $id_materi){
-		$data['id_materi'] = $id_materi;
-		$data['id_user_siswa'] = $id_siswa;
-		$check=$this->db->get_where('tb_materi_siswa', $data);
-		if($check->num_rows()==0) $this->db->insert('tb_materi_siswa', $data);
-	}
-
-	public function mulaiModul($id_siswa, $id_modul){
-		$data['id_user_siswa'] = $id_siswa;
-		$data['id_modul'] = $id_modul;
-		$check=$this->db->get_where('tb_modul_siswa', $data);
-		if($check->num_rows()==0) $this->db->insert('tb_modul_siswa', $data);
-	}
-
-	public function getMateriById($id){
-		$this->db->where('id', $id);
-		return $this->db->get('tb_materi')->row();
-	}
-
-	public function getListMateri($id_modul){
-		$this->db->select('id, judul_materi, no_urut');
-		$this->db->where('id_modul', $id_modul);
-		$this->db->order_by('no_urut');
-		return $this->db->get('tb_materi');
-	}
-
-	public function checkMateriMulai($id_siswa, $id_materi){
-		$this->db->select('waktu_mulai');
-		$this->db->where('id_user_siswa', $id_siswa);
-		$this->db->where('id_materi', $id_materi);
-		$this->db->where('waktu_mulai is not null');
-		$waktu_mulai = $this->db->count_all_results('tb_materi_siswa');
-		if($waktu_mulai>0){
-			return true;
-		}else{
-			return false;
+	function getProgress($id_kelas, $id_user){
+		$jumlah = $this->db->select('COUNT(*) as jumlah')->from('modul_konten')
+			->join('modul', 'modul.id_modul=modul_konten.id_modul AND modul.id_kelas='.$id_kelas.' AND modul.is_aktif="Y"')
+			->where('status', 'Y')
+			->get()->row()->jumlah;
+		if(intval($jumlah)==0){
+			return 0;
 		}
+		$selesai = $this->db->select('COUNT(*) as selesai')->from('konten_siswa')
+			->join('modul_konten', 'modul_konten.id_konten=konten_siswa.id_konten AND modul_konten.status="Y"')
+			->join('modul', 'modul.id_modul=modul_konten.id_modul AND modul.id_kelas='.$id_kelas.' AND modul.is_aktif="Y"')
+			->where(array('is_finished'=>'Y', 'id_user_siswa'=>$id_user))
+			->get()->row()->selesai;
+
+		return round(($selesai/$jumlah)*100, 0);
 	}
 
-	public function checkMateriSelesai($id_siswa, $id_materi){
-		$this->db->select('waktu_selesai');
-		$this->db->where('id_user_siswa', $id_siswa);
-		$this->db->where('id_materi', $id_materi);
-		$this->db->where('waktu_selesai is not null');
-		$waktu_selesai = $this->db->count_all_results('tb_materi_siswa');
-		if($waktu_selesai>0){
-			return true;
+	function getKonten($id_modul, $id_user){
+		return $this->db->select('mk.id_konten, mk.judul_konten, mk.jenis, mk.durasi_belajar, ks.is_finished, ks.status')
+		->from('modul_konten as mk')
+		->join('konten_siswa as ks', 'mk.id_konten=ks.id_konten AND ks.id_user_siswa='.$id_user, 'left')
+		->where(array('mk.id_modul'=>$id_modul, 'mk.status'=>'Y'))
+		->order_by('mk.no_urut asc')
+		->get();
+	}
+
+	function getFullKonten($id_konten, $id_user){
+		return $this->db->select('mk.*, ks.is_finished, ks.id, ks.status, ks.nilai, ks.catatan_siswa')
+		->from('modul_konten as mk')
+		->join('konten_siswa as ks', 'mk.id_konten=ks.id_konten AND ks.id_user_siswa='.$id_user, 'left')
+		->where('mk.id_konten', $id_konten)
+		->order_by('mk.no_urut asc')
+		->get()->row();
+	}
+
+	function getNilai($id_kelas, $id_user){
+		return $this->db->select('mk.id_konten, mk.judul_konten, mk.jenis, ks.is_finished, ks.status, ks.nilai, ks.waktu_selesai')
+		->from('modul_konten as mk')
+		->join('konten_siswa as ks', 'mk.id_konten=ks.id_konten AND ks.id_user_siswa='.$id_user, 'left')
+		->join('modul as m', 'm.id_modul=mk.id_modul AND m.id_kelas='.$id_kelas)
+		->where('(mk.jenis="Latihan" OR mk.jenis="Tugas")')
+		->where(array('mk.status'=>'Y'))
+		->get();
+	}
+
+	// BELAJAR
+
+	function getDefaultKontenByKelas($id_kelas){
+		return $this->db->select('id_konten')->from('modul_konten')
+		->join('modul', 'modul.id_modul=modul_konten.id_modul AND modul.id_kelas='.$id_kelas)
+		->order_by('modul_konten.no_urut asc')->limit(1)->get()->row()->id_konten;
+	}
+
+	function cekKonten($id_konten, $id_kelas){
+		return $this->db->join('modul', 'modul.id_modul=modul_konten.id_modul AND modul.id_kelas='.$id_kelas)
+		->where('id_konten', $id_konten)->get('modul_konten')->num_rows();
+	}
+
+	function getNextKonten($id_konten, $id_kelas){
+		$id_konten = $this->db->query('(SELECT id_konten FROM (
+			SELECT mk.id_konten, @n1:=@n1 + 1 num, @n2:=IF(id_konten='.$id_konten.', @n1, @n2) pos
+			FROM (
+			 	SELECT id_konten FROM modul_konten
+				JOIN modul ON modul.id_modul=modul_konten.id_modul AND modul.id_kelas='.$id_kelas.' AND modul.is_aktif="Y"
+				WHERE modul_konten.status="Y"
+				ORDER BY modul.no_urut, modul_konten.no_urut
+			) mk, (SELECT @n1:=0, @n2:=0) n
+		) t
+		WHERE num=@n2+1)
+		UNION (SELECT NULL) LIMIT 1')->row()->id_konten;
+		return $id_konten;
+	}
+
+	function getPrevKonten($id_konten, $id_kelas){
+		$id_konten = $this->db->query('(SELECT id_konten FROM (
+			SELECT mk.id_konten, @n1:=@n1 + 1 num, @n2:=IF(id_konten='.$id_konten.', @n1, @n2) pos
+			FROM (
+			 	SELECT id_konten FROM modul_konten
+				JOIN modul ON modul.id_modul=modul_konten.id_modul AND modul.id_kelas='.$id_kelas.' AND modul.is_aktif="Y"
+				WHERE modul_konten.status="Y"
+				ORDER BY modul.no_urut, modul_konten.no_urut
+			) mk, (SELECT @n1:=0, @n2:=0) n
+		) t
+		WHERE num=@n2-1)
+		UNION (SELECT NULL)
+		LIMIT 1')->row()->id_konten;
+		return $id_konten;
+	}
+
+	function getLastKonten($id_kelas, $id_user){
+		$last = $this->db->select('mk.id_konten')->from('modul_konten mk')
+		->join('modul m', 'm.id_modul=mk.id_modul AND m.id_kelas=7 AND m.is_aktif="Y"')
+		->join('konten_siswa ks', 'ks.id_konten=mk.id_konten AND ks.id_user_siswa='.$id_user)
+		->where('mk.status', 'Y')
+		->order_by('m.no_urut desc')->order_by('mk.no_urut desc')
+		->limit(1)->get();
+		if($last->num_rows()>0){
+			return $last->row()->id_konten;
 		}else{
-			return false;
-		}
-	}
-
-	public function tandaiMateriSelesai($id_siswa, $id_materi){
-		$where['id_user_siswa'] = $id_siswa;
-		$where['id_materi'] = $id_materi;
-		$data['waktu_selesai'] = date('Y-m-d H:i:s');
-		$this->db->update('tb_materi_siswa', $data, $where);
-	}
-
-	public function getNextIdMateri($id_modul, $id_materi){
-		$list_materi = $this->getListMateri($id_modul)->result_array();
-		$index = array_search($id_materi, array_column($list_materi, 'id'));
-		if($index<count($list_materi)){
-			return $list_materi[$index+1]['id'];
-		} else{
-			return $id_materi;
+			return 0;
 		}
 	}
 
 	// LATIHAN SOAL
 
-	public function getModulSoalByKelas($id_user, $id_kelas){
-		$this->db->select('tb_modul.id, nama_modul, deskripsi_singkat, status_latihan, nilai, tgl_pengerjaan, id_sesi_latihan_terakhir');
-		$this->db->from('tb_modul_siswa');
-		$this->db->join('tb_modul', 'tb_modul.id=tb_modul_siswa.id_modul AND tb_modul_siswa.id_user_siswa='.$id_user, 'right');
-		$this->db->where('tb_modul.id_kelas', $id_kelas);
-		$this->db->order_by('no_urut');
-		return $this->db->get();
-	}
+	function sesiLatihan($id_konten, $id_user_siswa){
+		$waktu_mulai = date('Y-m-d H:i:s');
+		$dataUserKonten = array('id_konten'=>$id_konten, 'id_user_siswa'=>$id_user_siswa, 'status'=>'Belum', 'waktu_mulai'=>$waktu_mulai);
+		$this->MyModel->insert('sesi_latihan', $dataUserKonten);
+		$id_sesi_latihan = $this->MyModel->get('sesi_latihan', 'id', $dataUserKonten)->row()->id;
 
-	public function sesiSoal($id_modul, $id_user_siswa){
-
-		$dataUserModul = array('id_modul'=>$id_modul, 'id_user_siswa'=>$id_user_siswa, 'tgl_mulai'=>date('Y-m-d H:i:s'));
-		$this->db->insert('tb_sesi_latihan', $dataUserModul);
-
-		$this->db->select('id');
-		$id_sesi = $this->db->get_where('tb_sesi_latihan', $dataUserModul)->row()->id;
-
-		$this->db->select('jml_soal');
-		$this->db->where('id',$id_modul);
-		$jml_soal = $this->db->get('tb_modul')->row()->jml_soal;
-
-		$this->db->select('id');
-		$this->db->order_by('rand()');
-		$this->db->limit($jml_soal);
-		$soal = $this->db->get('tb_soal')->result();
-
+		$where = array('id_konten'=>$id_konten);
+		$jml_soal = $this->MyModel->get('modul_konten', 'latihan_jumlah_soal', $where)->row()->latihan_jumlah_soal;
+		$soal = $this->MyModel->get('soal_pertanyaan', 'id_soal', $where, 'rand()', $jml_soal)->result();
 		foreach ($soal as $key) {
-			$sesiSoal[] = array('id_sesi'=>$id_sesi, 'id_soal'=>$key->id);
+			$sesiSoal[] = array('id_sesi_latihan'=>$id_sesi_latihan, 'id_soal'=>$key->id_soal, 'status'=>'belum');
 		}
-		$this->db->insert_batch('tb_sesi_soal',$sesiSoal);
+		$this->MyModel->insert_batch('sesi_soal',$sesiSoal);
 
-		return $id_sesi;
+		$sesi_latihan = array('id_konten'=>$id_konten, 'id_sesi_latihan'=>$id_sesi_latihan, 'waktu_mulai'=>$waktu_mulai);
+		return $sesi_latihan;
 	}
 
-	public function getTglMulai($id_sesi_latihan){
-		$this->db->select('tgl_mulai');
-		$this->db->where('id', $id_sesi_latihan);
-		return $this->db->get('tb_sesi_latihan')->row()->tgl_mulai;
+	function getSoalById($id_sesi_latihan, $id_soal){
+		return $this->db->select('id, jawaban, status, jenis_soal, soal')->from('sesi_soal')
+		->join('soal_pertanyaan', 'soal_pertanyaan.id_soal=sesi_soal.id_soal')
+		->where(array('id_sesi_latihan'=>$id_sesi_latihan, 'sesi_soal.id_soal'=>$id_soal))
+		->get()->row();
 	}
 
-	public function getNomorSoal($id_sesi_latihan){
-		$this->db->select('id_soal, status');
-		$this->db->where('id_sesi', $id_sesi_latihan);
-		$this->db->order_by('id');
-		return $this->db->get('tb_sesi_soal');
+	function getSoalPembahasanById($id_sesi_latihan, $id_soal){
+		return $this->db->select('id, jawaban, status, jenis_soal, soal, pembahasan')->from('sesi_soal')
+		->join('soal_pertanyaan', 'soal_pertanyaan.id_soal=sesi_soal.id_soal')
+		->where(array('id_sesi_latihan'=>$id_sesi_latihan, 'sesi_soal.id_soal'=>$id_soal))
+		->get()->row();
 	}
 
-	public function getSoalById($id_soal){
-		$this->db->select('tb_sesi_soal.id as id_sesi_soal, soal, jawaban');
-		$this->db->from('tb_soal');
-		$this->db->join('tb_sesi_soal', 'tb_sesi_soal.id_soal=tb_soal.id');
-		$this->db->where('tb_soal.id', $id_soal);
-		return $this->db->get()->row();
+	function getTugas($id){
+		return $this->db->select('sesi_tugas.*, nama_user as reviewer')->from('sesi_tugas')
+		->join('user', 'user.id_user=sesi_tugas.id_user_reviewer', 'left')
+		->where('id', $id)->get()->row();
 	}
 
-	public function getJawabanByIdSoal($id){
-		$this->db->select('benar_1, salah_1, salah_2, salah_3');
-		$this->db->where('id', $id);
-		return $this->db->get('tb_soal')->row_array();
-	}
-
-	public function getSesiLatihan($id_sesi_latihan){
-		$this->db->where('id', $id_sesi_latihan);
-		return $this->db->get('tb_sesi_latihan')->row();
-	}
-
-	public function getPassingGrade($id){
-		$this->db->select('passing_grade');
-		$this->db->where('id', $id);
-		return $this->db->get('tb_modul')->row()->passing_grade;
-	}
-
-	public function getSoalDanJawaban($id_sesi_latihan){
-		$this->db->select('tb_sesi_soal.id as id_sesi_soal, jawaban, benar_1');
-		$this->db->from('tb_sesi_soal');
-		$this->db->join('tb_soal', 'tb_soal.id=tb_sesi_soal.id_soal');
-		$this->db->where('id_sesi', $id_sesi_latihan);
-		return $this->db->get();
-	}
-
-	public function updateSesiSoal($data){
-		return $this->db->update_batch('tb_sesi_soal', $data, 'id');
-	}
-
-	public function getSoalPembahasanById($id_soal){
-		$this->db->select('tb_sesi_soal.id as id_sesi_soal, soal, benar_1, jawaban, pembahasan');
-		$this->db->from('tb_soal');
-		$this->db->join('tb_sesi_soal', 'tb_sesi_soal.id_soal=tb_soal.id');
-		$this->db->where('tb_soal.id', $id_soal);
-		return $this->db->get()->row();
-	}
-
-	// FORUM
-
-	public function getForum($id_kelas){
-		$this->db->where('id_kelas', $id_kelas);
-		$this->db->order_by('tgl_dibuat','DESC');
-		return $this->db->get('tb_forum');
-	}
-
-	public function getForumById($id){
-		$this->db->where('id', $id);
-		return $this->db->get('tb_forum')->row();
-	}
-
-	// DISC
-
-	public function getDisc(){
-		$this->db->limit(20);
-		return $this->db->get('tb_disc_soal');
-	}
-
-	public function getDiscLastTest($id_user){
-		$this->db->where('id_user', $id_user);
-		$this->db->order_by('tgl_pengerjaan', 'DESC');
-		return $this->db->get('tb_disc_sesi')->row();
-	}
 }

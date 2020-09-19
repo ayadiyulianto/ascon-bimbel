@@ -1,569 +1,152 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="zxx">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
 
-<head>
-    <!--====== USEFULL META ======-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="APPTON HTML5 Template is a simple Smooth Personal App Landing Template" />
-    <meta name="keywords" content="App, Landing, Business, Onepage, Html, Business" />
+    <!-- head -->
+    <?php $this->load->view('template/_head') ?>
 
-    <!--====== TITLE TAG ======-->
-    <title>Beranda | OASSE - Bimbel Online</title>
+  </head>
+  <body>
 
-    <!--====== FAVICON ICON =======-->
-    <link rel="shortcut icon" type="image/ico" href="<?php echo base_url('educrown/assest/img/favicon.png') ?>" />
+    <!-- navigation -->
+    <?php $this->load->view('template/_header') ?>
 
-    <!--====== STYLESHEETS ======-->
-    <link href="<?php echo base_url('educrown/assest/css/plugins.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('educrown/assest/css/theme.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('educrown/assest/css/icons.css') ?>" rel="stylesheet">
+    <!-- CONTENT -->
+    <div class="content content-fixed">
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
 
-    <!--====== MAIN STYLESHEETS ======-->
-    <link href="<?php echo base_url('educrown/style.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('educrown/assest/css/responsive.css') ?>" rel="stylesheet">
+        <div class="row">
+          <div class="col-12">
+            <div id="carouselExample4" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExample4" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExample4" data-slide-to="1"></li>
+                <li data-target="#carouselExample4" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner bg-dark">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/1920x350" class="d-block w-100 op-3" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First Slide</h5>
+                      <p class="tx-14">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://via.placeholder.com/1920x350" class="d-block w-100 op-3" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second Slide</h5>
+                    <p class="tx-14">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://via.placeholder.com/1920x350" class="d-block w-100 op-3" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third Slide</h5>
+                    <p class="tx-14">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExample4" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"><i data-feather="chevron-left"></i></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExample4" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"><i data-feather="chevron-right"></i></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
-    <script src="<?php echo base_url('educrown/assest/js/vendor/modernizr-2.8.3.min.js') ?>"></script>
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-</head>
+        <!-- KELAS POPULER -->
+        <div class="row mg-t-40">
+          <div class="col-12 mg-b-10">
+            <h4 class="tx-uppercase"><i data-feather="thumbs-up"></i> &nbsp Kelas Populer</h4>
+          </div>
+        </div>
+        <div class="card bg-gray-100">
+          <div class="card-body">
+            <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
+              <?php foreach($kelas_populer->result() as $kls){
+                $nested['kls'] = $kls;
+                $this->load->view('frontend/view_card_kelas', $nested);
+              } ?>
+            </div><!-- row -->
+          </div>
+        </div>
 
-<body data-spy="scroll" data-target=".mainmenu-area" data-offset="90">
+        <!-- KELAS TERBARU -->
+        <div class="row mg-t-40">
+          <div class="col-12 mg-b-10">
+            <h4 class="tx-uppercase"><i data-feather="zap"></i> &nbsp Kelas Terbaru</h4>
+          </div>
+        </div>
+        <div class="card bg-gray-100">
+          <div class="card-body">
+            <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
+              <?php foreach($kelas_terbaru->result() as $kls){
+                $nested['kls'] = $kls;
+                $this->load->view('frontend/view_card_kelas', $nested);
+              } ?>
+            </div><!-- row -->
+          </div>
+        </div>
 
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+        <!-- BANNER -->
 
-    <!--- PRELOADER -->
-    <div class="preeloader">
-        <div class="preloader-spinner"></div>
+        <div class="row mg-t-40">
+          <div class="col-12">
+            <img src="https://via.placeholder.com/1920x240" class="img-fluid" alt="...">
+          </div>
+        </div>
+
+        <!-- SEMUA KELAS BY KATEGORI -->
+
+        <?php foreach($semuakelas as $smk){
+        if($smk['jml_kelas']>0){ ?>
+
+        <div class="row mg-t-40">
+          <div class="col-12 mg-b-10 d-flex justify-content-between">
+            <h4 class="tx-uppercase"><i data-feather="chevron-right"></i> &nbsp <?=$smk['nama_kategori']?></h4>
+            <a href="<?=base_url('welcome/kategori/'.$smk['slug'])?>" class="tx-primary"><i><u>Lihat semua</u></i></a>
+          </div>
+        </div>
+        <div class="card bg-gray-100">
+          <div class="card-body">
+            <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
+              <?php foreach($smk['kelas']->result() as $kls){
+                $nested['kls'] = $kls;
+                $this->load->view('frontend/view_card_kelas', $nested);
+              } ?>
+            </div><!-- row -->
+          </div>
+        </div>
+
+        <?php }} ?>
+
+        <!-- BANNER -->
+
+        <div class="row mg-t-40">
+          <div class="col-12">
+            <img src="https://via.placeholder.com/1920x240" class="img-fluid" alt="...">
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!--SCROLL TO TOP-->
-    <a href="#scroolup" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+    <!-- footer -->
+    <?php $this->load->view('template/_footer') ?>
+    <?php $this->load->view('template/_foot') ?>
 
-    <!--START TOP AREA-->
-    <header class="top-area" id="home">
-        <div class="header-top-area" id="scroolup">
-            <!--MAINMENU AREA-->
-            <div class="mainmenu-area" id="mainmenu-area">
-                <div class="mainmenu-area-bg"></div>
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a href="<?php echo base_url() ?>" class="navbar-brand"><img src="<?php echo base_url('educrown/assest/img/logo.png') ?>" alt="logo"></a>
-                        </div>
-                        <div id="main-nav" class="stellarnav">
-                            <ul id="nav" class="nav navbar-nav pull-right">
-                                <li class="active"><a href="<?php echo base_url() ?>">Beranda</a></li>
-                                <li><a href="<?php echo base_url('frontend/kelas') ?>">Kelas</a></li>
-                                <li><a href="<?php echo base_url('auth') ?>">Login</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <!--END MAINMENU AREA END-->
-        </div>
+    <!-- another js -->
 
-        <!--WELCOME SLIDER AREA-->
-        <div class="welcome-slider-area white font16">
-            <div class="welcome-single-slide">
-                <div class="slide-bg-one slide-bg-overlay"></div>
-                <div class="welcome-area">
-                    <div class="container">
-                        <div class="row flex-v-center">
-                            <div class="col-md-8 col-lg-7 col-sm-12 col-xs-12">
-                                <div class="welcome-text">
-                                    <h1>Develop a passion for learning new things.</h1>
-                                    <p>Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater joy adapted too shy. Now properly surprise expenses.</p>
-                                    <div class="home-button">
-                                        <form action="#">
-                                            <input type="search" name="search" id="search" placeholder="Search Courses">
-                                            <button type="submit"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="welcome-single-slide">
-                <div class="slide-bg-two slide-bg-overlay"></div>
-                <div class="welcome-area">
-                    <div class="container">
-                        <div class="row flex-v-center">
-                            <div class="col-md-8 col-lg-7 col-sm-12 col-xs-12">
-                                <div class="welcome-text">
-                                    <h1>Develop a passion for learning new things.</h1>
-                                    <p>Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater joy adapted too shy. Now properly surprise expenses.</p>
-                                    <div class="home-button">
-                                        <form action="#">
-                                            <input type="search" name="search" id="search" placeholder="Search Courses">
-                                            <button type="submit"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="welcome-single-slide">
-                <div class="slide-bg-three slide-bg-overlay"></div>
-                <div class="welcome-area">
-                    <div class="container">
-                        <div class="row flex-v-center">
-                            <div class="col-md-8 col-lg-7 col-sm-12 col-xs-12">
-                                <div class="welcome-text">
-                                    <h1>Develop a passion for learning new things.</h1>
-                                    <p>Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater joy adapted too shy. Now properly surprise expenses.</p>
-                                    <div class="home-button">
-                                        <form action="#">
-                                            <input type="search" name="search" id="search" placeholder="Search Courses">
-                                            <button type="submit"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--WELCOME SLIDER AREA END-->
-    </header>
-    <!--END TOP AREA-->
+    <script>
+      $(function(){
+        'use strict'
 
-    <!--FEATURES TOP AREA-->
-    <section class="features-top-area" id="features">
-        <div class="container">
-            <div class="row promo-content">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s">
-                        <div class="box-icon features-box-icon">
-                            <i class="fa fa-graduation-cap"></i>
-                        </div>
-                        <h3 class="box-title">Keunggulan 1</h3>
-                        <p>A Google Docs scam that appears to be widespread began landing in Wednesday in what seemed to be a phishing attack.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="text-icon-box relative mb20 xs-mb0  wow fadeInUp padding30" data-wow-delay="0.2s">
-                        <div class="box-icon features-box-icon">
-                            <i class="icofont icofont-business-man-alt-1"></i>
-                        </div>
-                        <h3 class="box-title">Keunggulan 2</h3>
-                        <p>A Google Docs scam that appears to be widespread began landing in Wednesday in what seemed to be a phishing attack.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="text-icon-box relative mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.3s">
-                        <div class="box-icon features-box-icon">
-                            <i class="fa fa-rocket"></i>
-                        </div>
-                        <h3 class="box-title">Keunggulan 3</h3>
-                        <p>A Google Docs scam that appears to be widespread began landing in Wednesday in what seemed to be a phishing attack.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FEATURES TOP AREA END-->
+      })
+    </script>
 
-    <!--ABOUT TOP CONTENT AREA-->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
-                    <div class="text-center wow fadeIn">
-                        <h2 class="xs-font20">OASSE - Bimbel Online dipercaya oleh 50.000 murid</h2>
-                        <p>Microsoft has spent a lot of time trying to make Windows self-repairing, partly because it generally gets the blame when other programs or users try to improve” it. Given that tens of thousands of expert programmers have worked on the code over the past 30 years.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--ABOUT TOP CONTENT AREA END-->
-
-    <!--FUN FACT AREA AREA-->
-    <section class="fun-fact-area center white relative padding-100-70" id="fact">
-        <div class="area-bg" data-stellar-background-ratio="0.6"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.1s">
-                        <h3 class="font60 xs-font26"><span class="counter">20</span>k</h3>
-                        <p class="font600">Graduated Students</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.2s">
-                        <h3 class="font60 xs-font26"><span class="counter">124</span></h3>
-                        <p class="font600">Expert Instructors</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.3s">
-                        <h3 class="font60 xs-font26"><span class="counter">600</span>k</h3>
-                        <p class="font600">Books in our library</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-fun-fact mb30 wow fadeInUp" data-wow-delay="0.4s">
-                        <h3 class="font60 xs-font26"><span class="counter">15</span>k</h3>
-                        <p class="font600">Students get employed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FUN FACT AREA AREA END-->
-
-    <!--COURSE AREA-->
-    <section class="course-area padding-top" id="courses">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2 class="xs-font26">Daftar Kelas</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row course-list">
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-1.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Belajar Php Sederhana</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-2.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Belajar Android Studio</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-3.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Cara Lulus Tes Wawancara</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                    <div class="single-course mb20">
-                        <img src="<?php echo base_url('educrown/assest/img/course/blog-4.jpg') ?>" alt="">
-                        <div class="course-details padding30">
-                            <h3 class="font18">Kupas Habis Tes STAN 2020</h3>
-                            <p>MPs who are leaving the protection of for the campaign trail will render...</p>
-                            <p class="mt30"><a href="#" class="enroll-button">Daftar Sekarang</a> <span class="course-price">$29.99</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--COURSE AREA END-->
-
-    <!--TESTMONIAL AREA AREA-->
-    <section class="testmonial-area bg-theme section-padding" id="testmonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2>Apa Kata Mereka</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="testmonial-slider">
-                        <div class="single-testmonial">
-                            <div class="author-content mb20">
-                                <p>“The recording starts with the patter of a summer squall. Later a drifting tone like that of a not-quite-tuned-in radio station rises and for a while drowns out the patter. These are the sounds encountered by NASA.”</p>
-                            </div>
-                            <div class="author-name-image relative">
-                                <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
-                                </div>
-                                <h4>Adi Yulianto</h4>
-                                <a href="#">Google Manager</a>
-                            </div>
-                        </div>
-                        <div class="single-testmonial">
-                            <div class="author-content mb20">
-                                <p>“The recording starts with the patter of a summer squall. Later a drifting tone like that of a not-quite-tuned-in radio station rises and for a while drowns out the patter. These are the sounds encountered by NASA.”</p>
-                            </div>
-                            <div class="author-name-image relative">
-                                <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
-                                </div>
-                                <h4>Robbie Sugara</h4>
-                                <a href="#">Graduate 2016</a>
-                            </div>
-                        </div>
-                        <div class="single-testmonial">
-                            <div class="author-content mb20">
-                                <p>“The recording starts with the patter of a summer squall. Later a drifting tone like that of a not-quite-tuned-in radio station rises and for a while drowns out the patter. These are the sounds encountered by NASA.”</p>
-                            </div>
-                            <div class="author-name-image relative">
-                                <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
-                                </div>
-                                <h4>Edo Afriando</h4>
-                                <a href="#">Graduate 2016</a>
-                            </div>
-                        </div>
-                        <div class="single-testmonial">
-                            <div class="author-content mb20">
-                                <p>“The recording starts with the patter of a summer squall. Later a drifting tone like that of a not-quite-tuned-in radio station rises and for a while drowns out the patter. These are the sounds encountered by NASA.”</p>
-                            </div>
-                            <div class="author-name-image relative">
-                                <div class="author-img mb20">
-                                    <img src="<?php echo base_url('educrown/assest/img/testmonial/testmonial.jpg') ?>" alt="">
-                                </div>
-                                <h4>Ricky Sadewa</h4>
-                                <a href="#">Graduate 2019</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--TESTMONIAL AREA AREA END-->
-
-    <!--BLOG AREA-->
-    <section class="blog-feed-area padding-top" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2>From Our Blog</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-1.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-2.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-3.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog-item wow fadeInUp visible-sm" data-wow-delay="0.4s">
-                        <div class="blog-thumb">
-                            <a href="blog.html"><img src="<?php echo base_url('educrown/assest/img/blog/blog-1.jpg') ?>" alt=""></a>
-                        </div>
-                        <div class="blog-details padding30">
-                            <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid Growth</a></h3>
-                            <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016  </a> by <a href="#">Mark Stonis</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--BLOG AREA END-->
-
-    <!--CLIENT AREA-->
-    <div class="client-area  padding-bottom mt100 sm-mt10 xs-mt0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="client-slider">
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-6.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-7.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-8.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-9.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-10.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-6.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-7.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-8.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-9.png') ?>" alt="">
-                        </div>
-                        <div class="single-client">
-                            <img src="<?php echo base_url('educrown/assest/img/client/client-10.png') ?>" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--CLIENT AREA END-->
-
-    <!--ADDMISSION AREA-->
-    <section class="admition-area padding-50-50 bg-theme">
-        <div class="container">
-            <div class="row flex-v-center">
-                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-                    <div class="admition-content xs-center xs-mb30">
-                        <h3 class="xs-font20">Addmission are now open</h3>
-                        <p>Writers and stars of Veep have responded incredulously to the news an Australian politician required stitches after knocking himself unconscious .</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-                    <div class="enroll-button right xs-center">
-                        <a href="#">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--ADDMISSION AREA END-->
-
-    <!--FOTOER AREA-->
-    <footer class="footer-area sky-gray-bg relative">
-        <div class="footer-top-area padding-80-80 bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
-                        <div class="single-footer footer-about sm-mb50 xs-mb50 sm-center xs-center">
-                            <div class="footer-logo mb30">
-                                <a href="#"><img src="<?php echo base_url('educrown/assest/img/logo.png') ?>" alt=""></a>
-                            </div>
-                            <p>OASSE - Bimbel Online telah hadir untuk membantu Anda dalam menangani kecemasan Anda dalam menghadapi tes</p>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-lg-2 col-sm-4 col-xs-12">
-                        <div class="single-footer footer-list white xs-center xs-mb50">
-                            <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Service</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Privicy Policy</a></li>
-                                <li><a href="#">Testmonial</a></li>
-                                <li><a href="#">Support</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-lg-5 col-sm-8 col-xs-12">
-                        <div class="single-footer footer-subscribe white xs-center">
-                            <h3 class="mb30 xs-font18">Subscribe Our Newsletter</h3>
-                            <p>Doubtful for answered one fat indulged margaret sir shutters together. Ladies so in wholly .</p>
-                            <div class="subscriber-form-area mt50 wow fadeIn">
-                                <!--<form action="#" class="subscriber-form mb100">
-                                    <input type="email" name="email" id="email" placeholder="Email Address">
-                                    <button type="submit">Subscribe</button>
-                                </form>-->
-                                <form id="mc-form" class="subscriber-form">
-                                    <label class="mt10" for="mc-email"></label>
-                                    <input type="email" id="mc-email" placeholder="email@example.com">
-                                    <button type="submit" class="plus-btn"><i class="fa fa-paper-plane-o"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom-area white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="footer-copyright text-center wow fadeIn">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--FOOER AREA END-->
-
-
-    <!--====== SCRIPTS JS ======-->
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery-1.12.4.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/vendor/bootstrap.min.js') ?>"></script>
-
-    <!--====== PLUGINS JS ======-->
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery.easing.1.3.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery-migrate-1.2.1.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/vendor/jquery.appear.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/owl.carousel.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/stellar.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/waypoints.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery.counterup.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/wow.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery-modal-video.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/stellarnav.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/placeholdem.min.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/contact-form.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery.ajaxchimp.js') ?>"></script>
-    <script src="<?php echo base_url('educrown/assest/js/jquery.sticky.js') ?>"></script>
-
-    <!--===== ACTIVE JS=====-->
-    <script src="<?php echo base_url('educrown/assest/js/main.js') ?>"></script>
-
-    <!--===== MAPS JS=====-->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTS_KEDfHXYBslFTI_qPJIybDP3eceE-A&sensor=false"></script>
-    <script src="<?php echo base_url('educrown/assest/js/maps.active.js') ?>"></script>
-</body>
-
+  </body>
 </html>

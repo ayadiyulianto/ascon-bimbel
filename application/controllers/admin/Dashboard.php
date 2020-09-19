@@ -3,20 +3,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
 
-	public function __construct() {
+	function __construct() {
 		parent::__construct();
 		$this->load->model('AdminModel');
-		$this->load->library('session');
 
-		if ($this->session->userdata('role') != 'admin' OR $this->session->userdata('oasse-bimbel') == FALSE) {
-			redirect(base_url("auth"));
+		if ($this->session->userdata('role') != 'Administrator' OR $this->session->userdata('oasse-bimbel') == FALSE) {
+			redirect("auth");
 		}
 
 	}
 	
-	public function index()
+	function index()
 	{
-		$this->load->view('admin/view_dashboard');
+		$data['title'] = "Dashboard";
+		$data['ringkasan'] = $this->AdminModel->getRingkasan();
+		$data['userTerbaru'] = $this->MyModel->get('user', 'id_user, nama_user, waktu_post, foto', null,'waktu_post desc', 5);
+		$this->load->view('admin/view_dashboard_new', $data);
+	}
+
+	function monitoring()
+	{
+		$data['title'] = "Dashboard - Monitoring";
+		$data['ringkasan'] = $this->AdminModel->getRingkasan();
+		$this->load->view('admin/view_monitoring', $data);
 	}
 
 }

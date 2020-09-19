@@ -3,122 +3,140 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Auth extends CI_Controller {
 
-	public function __construct() {
+	function __construct() {
 		parent::__construct();
-		$this->load->model('AuthModel');
-		$this->load->library('session');
+		if ($this->session->userdata('oasse-bimbel') == FALSE) {
+			checkCookie();
+	    }
 	}
 	
-	public function index() {
+	function index()
+	{
 		if ($this->session->userdata('oasse-bimbel') == TRUE) {
-			if ($this->session->userdata('role')=='admin'){
-				redirect(base_url("admin/dashboard"));
-			} elseif ($this->session->userdata('role')=='pengajar') {
-				redirect(base_url("pengajar/kelas"));
-			} elseif ($this->session->userdata('role')=='siswa') {
-				redirect(base_url("siswa/kelassaya"));
+			$redirectTo = userdata('redirectTo');
+			if (!empty($redirectTo)){
+				$this->session->unset_userdata('redirectTo');
+				redirect($redirectTo);
+			} elseif ($this->session->userdata('role')=='Administrator'){
+				redirect("admin/dashboard");
+			} elseif ($this->session->userdata('role')=='Pengajar') {
+				redirect("pengajar/dashboard");
+			} elseif ($this->session->userdata('role')=='Siswa') {
+				redirect("siswa/dashboard");
 			} 
 		} else {
-			$this->login();
+			redirect('auth/login');
 		}
 	}
 
-	public function login() {
-		header("Access-Control-Allow-Origin: *");
+	function login()
+	{
 		if($this->session->userdata('oasse-bimbel') == TRUE){
 			$this->index();
-		}else{
-			$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-			$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
+		}
 
-			if ($this->form_validation->run() == FALSE) {
-				$this->load->view('login');
-			} else {
-				$username = $this->input->post('username');
-				$password = $this->input->post('password');
-				$checkUser = $this->AuthModel->checkUser($username);
-				if($checkUser->num_rows()==1){
-					$user =  $checkUser->row();
-					if (password_verify($password, $user->password)) {
-						$session_data['oasse-bimbel'] = TRUE;
-						$session_data['id_user'] = $user->id;
-						$session_data['username'] = $user->username;
-						$session_data['nama_user'] = $user->nama;
-						$session_data['role'] = $user->role;
-						// Add user data in session
-						$this->session->set_userdata($session_data);
-						$this->index();
-					} else {
-						$this->session->set_flashdata('error','Password Salah');
-						$this->load->view('login');
-					}
-				}else {
-					$this->session->set_flashdata('error','Username Salah');
-					$this->load->view('login');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
+
+		if ($this->form_validation->run() != FALSE) {
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+			$checkUser = $this->MyModel->get('user', 'id_user, role, password, nama_user, foto', array('email'=>$email));
+			if($checkUser->num_rows()==1){
+				$user = $checkUser->row();
+				if (password_verify($password, $user->password)) {
+					$session_data['oasse-bimbel'] = TRUE;
+					$session_data['id_user'] = $user->id_user;
+					$session_data['role'] = $user->role;
+					$session_data['nama_user'] = $user->nama_user;
+					$session_data['foto'] = $user->foto;
+					// Add user data in session
+					$this->session->set_userdata($session_data);
+					$rememberme = $this->input->post('rememberme');
+					// Add cookies
+					if($rememberme=='Y'){
+						$key = random_string('alnum', 60);
+	                	$update = $this->MyModel->update('user', array('cookie_key'=>$key), array('id_user'=>$user->id_user));
+	                	if($update){ 
+	                		set_cookie('oassebimbel', $key, 3600*24*30);
+	                	}
+	                }
+
+					$this->index();
+				} else {
+					notif('danger', 'Password kamu salah');
 				}
+			}else {
+				notif('danger', 'Email kamu salah');
 			}
 		}
-		
+		$data['title'] = "Login";
+		$this->load->view('frontend/view_login_new', $data);
 	}
 	
-	// Logout from admin page
-	public function logout() {
+	function logout()
+	{
 		$this->session->sess_destroy();
-		redirect(base_url("auth"));
+		delete_cookie('oassebimbel');
+		redirect("auth");
 	}
 
-	public function daftar()
+	function daftar()
 	{
-		header("Access-Control-Allow-Origin: *");
 		if($this->session->userdata('oasse-bimbel') == TRUE){
 			$this->index();
-		}else{
-			$this->form_validation->set_rules('email','Email','trim|required|valid_email');
-			$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-			$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]');
-			$this->form_validation->set_rules('ulangipassword', 'Ulangi Password', 'trim|required|xss_clean|matches[password]');
+		}
 
-			if ($this->form_validation->run() == FALSE) {
-				$this->load->view('register');
-			} else {
-				$username = $this->input->post('username');
-				$cek = $this->AuthModel->checkUser($username);
-				if($cek->num_rows()){
-					$this->session->set_flashdata('error','Username telah terdaftar.');
-					$this->load->view('register');
+		$this->form_validation->set_rules('email','Email','trim|required|valid_email');
+		$this->form_validation->set_rules('nama_user', 'Nama', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]');
+		$this->form_validation->set_rules('confirmpassword', 'Ulangi Password', 'trim|required|xss_clean|matches[password]');
+
+		if ($this->form_validation->run() != FALSE) {
+			$email = $this->input->post('email');
+			$cek_email = $this->MyModel->get('user', 'email', array('email'=>$email))->num_rows();
+			if($cek_email>0){
+				notif('danger','Email telah terdaftar.');
+			}else{
+				$akun['role'] = "Siswa";
+				$akun['nama_user'] = $this->input->post('nama_user');
+				$akun['email'] = $email;
+				$akun['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
+				$akun['waktu_post'] = date('Y-m-d H:i:s');
+				$insert=$this->MyModel->insert('user', $akun);
+				if($insert){
+					notif('success', 'Buat Akun Berhasil. Silahkan Login!');
+					redirect("auth");
 				}else{
-					$akun['role'] = "siswa";
-					$akun['username'] = $this->input->post('username');
-					$akun['email'] = $this->input->post('email');
-					$akun['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
-					$insert=$this->AuthModel->createNewUser($akun);
-					if($insert){
-						$this->session->set_flashdata('info','Pendaftaran Berhasil. Silahkan Login!');
-						redirect(base_url('auth'));
-					}else{
-						$this->session->set_flashdata('error','Pendaftaran Gagal.');
-						$this->load->view('register');
-					}
+					notif('danger', 'Buat Akun Gagal.');
 				}
 			}
 		}
+		$data['title'] = "Daftar";
+		$this->load->view('frontend/view_daftar_new', $data);
 	}
 
-	public function lupapassword() {
-		header("Access-Control-Allow-Origin: *");
+	function checkEmail()
+	{
+		$email = $this->input->post('email');
+		$cek_email = $this->MyModel->get('user', 'email', array('email'=>$email))->num_rows();
+		echo $cek_email;
+	}
+
+	function lupapassword()
+	{
 		if($this->session->userdata('oasse-bimbel') == TRUE){
 			$this->index();
 		}else{
 			$email=$this->input->post('email');
-			$result = $this->AuthModel->get_where('tb_user',array('email'=>$email));
+			$result = $this->MyModel->get_where('tb_user',array('email'=>$email));
 			if ($result->num_rows()==1) {
-				$this->session->set_flashdata('info','Perubahan password telah dikirim ke email anda. Silahkan periksa  kotak masuk email anda');
+				notif('success','Perubahan password telah dikirim ke email anda. Silahkan periksa  kotak masuk email anda');
 			} else {
-				$this->session->set_flashdata('error','Email anda tidak terdaftar. Silahkan daftar baru!');
+				notif('danger','Email anda tidak terdaftar. Silahkan daftar baru!');
 			}
-			$this->login();
+			redirect("auth");
 		}
 	}
-
 
 }
